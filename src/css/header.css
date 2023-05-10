@@ -2,7 +2,9 @@
   width: 100px;
   height: 28px;
 }
-.header{background-color:#ffffff;}
+.header{background: #FFFFFF;
+  border: 1.5px solid #111111;
+  border-radius: 0px 0px 8px 8px;}
 
 .icon-burger {    
     stroke: currentColor;    
