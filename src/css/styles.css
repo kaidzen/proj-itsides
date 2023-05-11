@@ -31,12 +31,12 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --background-header: #ffffff;
+  --background-header: rgb(255, 255, 255);
   --background-main: #d0d0d0;
   --main-textcolor: rgba(17, 17, 17, 0.6);
-  --H2-textcolor: rgba(17, 17, 17, 1);
-  --main-color: #4f2ee8;
-  --accent-color: #eac645;
+  --H2-textcolor: rgb(17, 17, 17);
+  --main-color: rgb(79, 46, 232);
+  --accent-color: rgb(234, 198, 69);
   --hover-button: rgba(79, 46, 232, 1);
 }
 
@@ -64,4 +64,23 @@
   --panel-bg-color: rgba(17, 17, 17, 1);
   --container-bg-color: rgba(32, 32, 36, 1);
   --text-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .aside-flex {
+    display: flex;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home-page__flex {
+    display: flex;
+  }
+
+  .books-wrapper {
+    margin-top: 40px;
+  }
+  .aside-flex {
+    display: block;
+  }
 }

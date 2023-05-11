@@ -212,3 +212,72 @@
   color: #ffffff;
   background-color: #4f2ee8;
 }
+
+@media (min-width: 768px) {
+  .books-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    grid-column-gap: 25px;
+    grid-row-gap: 40px;
+  }
+
+  .book-list__item {
+    flex-basis: calc((100% - 75px) / 3);
+  }
+}
+
+@media (min-width: 1440px) {
+  .books-list {
+    grid-column-gap: 24px;
+    justify-content: start;
+  }
+  .book-list__item {
+    flex-basis: calc((100% - 96px) / 5);
+  }
+}
+
+.categories-list__title {
+  font-family: 'DM Sans Bold';
+  font-size: 32px;
+  line-height: 1.19;
+  letter-spacing: -0.04em;
+
+  color: var(--H2-textcolor);
+  margin-bottom: 40px;
+}
+
+.book-list__item {
+  margin-bottom: 40px;
+}
+
+.book-img {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 767.98px) {
+  .book-img {
+    width: 100%;
+  }
+}
+
+.book-tittle {
+  font-family: 'DM Sans Bold';
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--H2-textcolor);
+
+  margin-bottom: 4px;
+}
+
+.book-author {
+  font-family: 'DM Sans Regular';
+  font-style: italic;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.04em;
+
+  color: #b4afaf;
+}
