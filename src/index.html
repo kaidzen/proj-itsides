@@ -11,28 +11,25 @@
     <title>HOME</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-
   <body>
     <load ="partials/header.html" />
 
-    <section class="section">
-      <div class="main-content">
-        <aside class="sidebar">
-          <div>
-            <load ="partials/all-category.html" />
-          </div>
+    <section class="home-page__flex">
+      <aside class="aside-flex">
+        <div>
+          <load ="partials/all-category.html" />
+        </div>
 
-          <div>
-            <load ="partials/support-UA.html" />
-          </div>
-        </aside>
-        <load ="partials/main-home.html" />
-      </div>
+        <div>
+          <load ="partials/support-UA.html" />
+        </div>
+      </aside>
+      <load ="partials/main-home.html" />
+      <load ="partials/category-book-list.html" />
     </section>
 
     <!-- Loads the specified .html file -->
     <load ="partials/footer.html" />
-
-    <script type="module" src="index.html"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
