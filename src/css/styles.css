@@ -9,12 +9,12 @@
 @import url('./reset.css');
 @import url('./fonts.css');
 @import url('./header.css');
-@import url('./allCategory.css');
-@import url('./supportUA.css');
-@import url('./mainHome.css');
-@import url('./listShopList.css');
+@import url('./all-сategory.css');
+@import url('./support-UA.css');
+@import url('./main-home.css');
+@import url('./list-shop-list.css');
 @import url('./footer.css');
-@import url('./modalWindow.css');
+@import url('./modal-window.css');
 
 
 :root {
