@@ -30,6 +30,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --background-header: #ffffff;
+  --background-main: #d0d0d0;
+  --main-textcolor: rgba(17, 17, 17, 0.6);
+  --H2-textcolor: rgba(17, 17, 17, 1);
+  --main-color: #4f2ee8;
+  --accent-color: #eac645;
+  --hover-button: rgba(79, 46, 232, 1);
 }
 
 .container {
@@ -50,4 +58,10 @@
     padding-right: 24px;
     padding-left: 24px;
   }
+}
+
+:root[theme='dark'] {
+  --panel-bg-color: rgba(17, 17, 17, 1);
+  --container-bg-color: rgba(32, 32, 36, 1);
+  --text-color: #ffffff;
 }
