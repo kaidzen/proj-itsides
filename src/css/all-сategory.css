@@ -26,6 +26,7 @@
 
 .categories-list__item {
   margin-bottom: 24px;
+  transition: var(--defolt-animation);
 }
 .categories-list__item.active {
   color: var(--hover-button);

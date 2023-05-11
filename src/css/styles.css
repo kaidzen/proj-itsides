@@ -33,8 +33,8 @@
 
   --background-header: rgb(255, 255, 255);
   --background-main: #d0d0d0;
-  --main-textcolor: rgba(17, 17, 17, 0.6);
-  --H2-textcolor: rgb(17, 17, 17);
+  --main-textcolor: #11111199;
+  --H2-textcolor: #111111;
   --main-color: rgb(79, 46, 232);
   --accent-color: rgb(234, 198, 69);
   --hover-button: rgba(79, 46, 232, 1);
