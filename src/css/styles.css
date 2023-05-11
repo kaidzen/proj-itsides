@@ -31,4 +31,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --background-header: #FFFFFF;
+  --background-main: #D0D0D0;
+  --main-textcolor: rgba(17, 17, 17, 0.6);
+  --H2-textcolor: rgba(17, 17, 17, 1);
+  --main-color: #4F2EE8;
+  --accent-color: #EAC645;
+  --hover-button: rgba(79, 46, 232, 1);
+
+}
+:root[theme='dark'] {
+  --panel-bg-color: rgba(17, 17, 17, 1);
+  --container-bg-color: rgba(32, 32, 36, 1);
+  --text-color: #FFFFFF;
 }
