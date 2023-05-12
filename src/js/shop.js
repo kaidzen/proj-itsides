@@ -164,3 +164,5 @@ function createMarkupPaginationSHopList(){
 //     let value = notes[currentId];
 //     localStorage.setItem(currentId, value);
 //   }
+
+
