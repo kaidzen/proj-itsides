@@ -6,12 +6,8 @@ const categoriesContainer = document.querySelector('.categories-list-js');
 
 //  Отримуємо масив зі списком категорії з бекенду
 const getCategoriesList = async () => {
-  try {
-    const response = await axios(URL);
-    return response.data;
-  } catch (error) {
-    console.log(error);
-  }
+  const response = await axios(URL);
+  return response.data;
 };
 
 // Функція створення розмітки для меню з категоріями
@@ -25,9 +21,11 @@ function createMurkupForCategoryList(arr) {
 }
 
 // Рендер розмітки
-getCategoriesList().then(categoriesListArray =>
-  categoriesContainer.insertAdjacentHTML(
-    'beforeend',
-    createMurkupForCategoryList(categoriesListArray)
+getCategoriesList()
+  .then(categoriesListArray =>
+    categoriesContainer.insertAdjacentHTML(
+      'beforeend',
+      createMurkupForCategoryList(categoriesListArray)
+    )
   )
-);
+  .catch((error = console.log(error)));
