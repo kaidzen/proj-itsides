@@ -1,76 +1,82 @@
-.main-content {
-  margin-left: auto;
-  margin-right: auto;
+.section {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-.sidebar {
+.main-content {
+  width: 375px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  /* outline: 2px solid blue; */
+}
+
+.sidebar {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+  /* outline: 2px solid green; */
+}
+
+@media screen and (min-width: 375px) {
+  .main-content {
+    width: 375px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .main-content {
+  .section {
     padding-bottom: 100px;
   }
 
+  .main-content {
+    width: 768px;
+  }
+
   .sidebar {
+    width: 100%;
     display: flex;
     justify-content: center;
     grid-gap: 32px;
     padding-left: 24px;
     padding-right: 24px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 100px;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .section {
+    padding-bottom: 72px;
+  }
+
   .main-content {
-    width: 370px;
+    width: 1440px;
     display: flex;
     justify-content: center;
     grid-gap: 40px;
-    padding-top: 40px;
-    padding-bottom: 72px;
   }
 
   .sidebar {
     display: block;
     width: 380px;
     padding-right: 0;
-
   }
 }
 
-.container-besrsellers {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
+/* .container-besrsellers {
   outline: 2px solid tomato;
-}
-
-@media screen and (min-width: 375px) {
-  .container-besrsellers {
-    width: 375px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container-besrsellers {
-    width: 768px;
-  }
-}
+} */
 
 @media screen and (min-width: 1440px) {
   .container-besrsellers {
-    width: 1044px;
+    width: 1020px;
     padding-left: 0;
     padding-right: 24px;
+    margin-right: auto;
   }
 }
 
@@ -165,7 +171,7 @@
 @media screen and (min-width: 768px) {
   .list-books {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     grid-gap: 25px;
   }
 
@@ -188,7 +194,7 @@
 @media screen and (min-width: 1440px) {
   .list-books {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     grid-gap: 24px;
   }
 
@@ -237,4 +243,104 @@
 .btn-seemore:focus {
   color: #ffffff;
   background-color: #4f2ee8;
+}
+
+@media (min-width: 768px) {
+  .books-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+    grid-column-gap: 25px;
+    grid-row-gap: 40px;
+  }
+
+  .book-list__item {
+    flex-basis: calc((100% - 75px) / 3);
+  }
+}
+
+@media (min-width: 1440px) {
+  .books-list {
+    grid-column-gap: 24px;
+  }
+  .book-list__item {
+    flex-basis: calc((100% - 96px) / 5);
+  }
+}
+
+.categories-list__title {
+  font-family: 'DM Sans Bold';
+  font-size: 32px;
+  line-height: 1.19;
+  letter-spacing: -0.04em;
+
+  color: var(--H2-textcolor);
+  margin-bottom: 40px;
+}
+
+.book-img {
+  margin-bottom: 14px;
+  border-radius: 8px;
+}
+
+@media (max-width: 767.98px) {
+  .book-list__item {
+    margin-bottom: 40px;
+  }
+  .book-img {
+    width: 100%;
+  }
+}
+
+.book-tittle {
+  font-family: 'DM Sans Bold';
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--H2-textcolor);
+
+  margin-bottom: 4px;
+}
+
+.book-author {
+  font-family: 'DM Sans Regular';
+  font-style: italic;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.04em;
+
+  color: #b4afaf;
+}
+
+.book-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.book-overlay {
+  font-family: 'DM Sans Regular';
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--H2-textcolor);
+
+  background: var(--accent-color);
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  transform: translateY(100%);
+  transition: var(--defolt-animation);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1440px) {
+  .book-list__item a:hover .book-overlay {
+    transform: translateY(-112%);
+  }
 }
