@@ -1,4 +1,5 @@
 <header class="header">
+  <div class="container header-content">
   <div class="logo">
     <a href="./index.html" class="logo-bookshelf">
       <svg
@@ -7,11 +8,25 @@
         height="24"
         aria-label="logo bookshelf"
       >
-        <use href="/src/img/sprite.svg#logo"></use>
+        <use href=""></use>
       </svg>
------HOME-----
+      <svg
+      class="header-logo-name"
+      width="77"
+      height="14"
+      aria-label="logo name"
+    >
+      <use href=""></use>
+    </svg>
     </a>
-    <a href="./shop.html">-----SHOP-----</a>
+  </div>
+  <div class="header-nav">
+    <a href="../index.html" class="header-home-btn">Home</a>
+    <a href="../shop.html" class="header-shopping-btn"> Shopping list
+      <svg class="header-shopping-logo" width="20" height="20" aria-label="shopping logo" >
+        <use href=""></use>
+      </svg>
+    </a>
   </div>
   <label class="switch">
     <input class="switch__input" type="checkbox" role="switch">
@@ -37,4 +52,5 @@
     </svg>
     <span class="switch__sr">Dark Mode</span>
 </label>
+</div>
 </header>
