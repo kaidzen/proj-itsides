@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+.header {
+  background: var(--background-header);
+  border: 1.5px solid #111111;
+  border-radius: 0px 0px 8px 8px;
+  padding: 22px 0 22px 0;
+}
 /* Toggle switch */
 
 .switch {
@@ -50,9 +56,9 @@ input:checked + .slider {
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* input:focus + .slider {
+input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
-} */
+}
 
 input:checked + .slider:before {
   -webkit-transform: translateX(20px);
@@ -68,38 +74,15 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.header {
-  background: var(--color-white);
-  border: 1.5px solid #111111;
-  border-radius: 0px 0px 8px 8px;
-  padding: 22px 0 22px 0;
-}
 
-/* LOGO */
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.header-logo-svg,
-.header-logo-bookshelf {
-  display: block;
-}
-.header-logo-bookshelf {
-  font-family: 'DM Sans Bold';
-  font-size: 17px;
-  color: #000000;
-  transition: var(--defolt-animation);
-}
-.header-logo-bookshelf:hover {
-  color: var(--hover-button);
-}
+
 
 /* SIGN UP */
 
 .log-in-btn {
   display: none;
 }
+
 @media screen and (min-width: 768px) {
   .log-in-btn {
     display: flex;
@@ -108,10 +91,16 @@ input:checked + .slider:before {
     min-width: 184px;
     padding: 13px 14px;
     background: #4f2ee8;
-    border: 1.5px solid var(--primary-text-color);
+    border: 1.5px solid var(--H2-textcolor);
     border-radius: 18px;
     cursor: pointer;
+    transition: all var(--defolt-animation)
   }
+}
+
+.log-in-btn:hover {
+  background: var(--background-header);
+  color: #000000;
 }
 
 .log-in-btn {
@@ -274,13 +263,14 @@ body.theme-dark .icon-menu-burger:hover {
   flex-wrap: wrap;
   gap: 4px;
   align-items: center;
+  font-family: 'DM Sans Bold', sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.04em;
   transition: all var(--defolt-animation);
 }
 .logo-bookshelf:hover {
-  box-shadow: rgba(234, 198, 69, 0.05) 0px 1px 0px,
-    rgba(234, 198, 69, 0.9) 0px 0px 10px;
-  padding: 5px 0;
-  border-radius: 18px;
+  color: var(--main-color);
 }
 .form-check {
   margin: 0;
@@ -350,18 +340,18 @@ body.theme-dark .icon-menu-burger:hover {
 .ui-switcher[aria-checked='true']:after {
   left: 21px;
 }
-.header-sign-btn:hover {
+/* .header-sign-btn:hover {
   box-shadow: rgba(234, 198, 69, 0.05) 0px 1px 0px,
     rgba(79, 46, 232, 0.7) 0px 0px 15px;
   transition: all var(--transition-rule);
   background-color: #c7a83a;
   border-radius: 10px;
-}
+} */
 @media screen and (max-width: 767px) {
   .header-nav {
     display: none;
   }
-  .header-sign-btn,
+  /* .header-sign-btn, */
   .header-sign-open {
     display: none;
   }
@@ -503,28 +493,6 @@ body.theme-dark .icon-menu-burger:hover {
   display: flex;
   align-items: center;
 }
-
-/* //  {
-//   font-family: 'DM Sans';
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.29;
-//   letter-spacing: -0.04em;
-//   text-transform: uppercase;
-
-//   padding: 7px 16px;
-//   gap: 8px;
-//   border: none;
-//   width: 156px;
-//   height: 34px;
-//   background: var(--color-orange);
-//   border-radius: 36px;
-
-//   display: flex;
-//   align-items: center;
-//   color: #111111;
-// } */
 
 .header-sign-user {
   font-family: DM Sans, medium;
@@ -718,7 +686,7 @@ body.theme-dark .icon-menu-burger:hover {
   }
 }
 
-.header-sign-btn-signup {
+/* .header-sign-btn-signup {
   display: none;
 }
 
@@ -835,7 +803,7 @@ body.theme-dark .icon-menu-burger:hover {
   line-height: 18px;
   letter-spacing: -0.04em;
   color: #111111;
-}
+} */
 
 .header-home-btn {
   width: 72px;
@@ -876,7 +844,8 @@ body.theme-dark .icon-menu-burger:hover {
 @media screen and (min-width: 768px) {
   .header-home-btn,
   .header-shopping-btn {
-    color: var(--color-black);
+    color: var(--H2-textcolor);
+    transition: all var(--defolt-animation);
   }
 }
 
@@ -885,18 +854,15 @@ body.theme-dark .icon-menu-burger:hover {
   color: #ffffff;
 }
 
-.header-home-btn.active,
+/* .header-home-btn.active,
 .header-shopping-btn.active {
   font-weight: 700;
   background: #eac645;
-  /* // ++++ */
-}
+} */
 .header-home-btn:hover,
 .header-shopping-btn:hover {
-  /* // color: #eac645; */
-  box-shadow: rgba(234, 198, 69, 0.05) 0px 1px 0px,
-    rgba(234, 198, 69, 0.9) 0px 0px 10px;
-  transition: all var(--transition-rule);
+  font-weight: 700;
+  background: #eac645;
 }
 
 .theme-dark .header-home-btn:hover.active,
