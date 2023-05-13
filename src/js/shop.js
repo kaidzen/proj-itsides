@@ -131,7 +131,7 @@ function createMarkupShoppingList(arr){
                         <a class='delete-btn'>
                             <svg class="dump" width="20" height="20" >
         <use href="./img/sprite.svg#dump"></use>
-                    <a>
+                    </a>
                         
                     </div>
                     <p class="discription-shoppinglist">${description}</p>
@@ -139,9 +139,9 @@ function createMarkupShoppingList(arr){
                     <div class="autor-link-shoppingList">
                         <p class="shop-book-autor">${author}</p>
                         <ul class="links-shoppingList">
-                        <li class="shop-book-link"><a "shop-book-link" href="${amazonUrl}"><img class="amazon" src="./img/icon-book-store/amazon.png" alt="${amazon} "></a></li>
-                        <li class=><a "shop-book-link" href="${appleUrl}"><img class="apple-store" src="./img/icon-book-store/apple-store.png" alt="${apple} "></a></li>
-                        <li ><a class="shop-book-link" href="${bookUrl}"><img class="book-shop" src="./img/icon-book-store/book-shop.png" alt="${book} "></a></li>
+                        <li class="shop-book-link amazon-link">     <a class="shop-a" href="${amazonUrl}"><img class="amazon" src="./img/icon-book-store/amazon.png" alt="${amazon} "></a></li>
+                        <li class="shop-book-link apple-store-link"><a class="shop-a" href="${appleUrl}"><img class="apple-store" src="./img/icon-book-store/apple-store.png" alt="${apple} "></a></li>
+                        <li class="shop-book-link book-shop-link">  <a class="shop-a" href="${bookUrl}"><img class="book-shop" src="./img/icon-book-store/book-shop.png" alt="${book} "></a></li>
                         </ul>
                     </div> 
                     </div>
