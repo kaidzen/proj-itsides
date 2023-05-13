@@ -1,4 +1,4 @@
-.section {
+.home-page__flex {
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -12,7 +12,7 @@
   /* outline: 2px solid blue; */
 }
 
-.sidebar {
+.aside-flex {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
@@ -26,7 +26,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section {
+  .home-page__flex {
     padding-bottom: 100px;
   }
 
@@ -34,7 +34,7 @@
     width: 768px;
   }
 
-  .sidebar {
+  .aside-flex {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -49,7 +49,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .section {
+  .home-page__flex {
     padding-bottom: 72px;
   }
 
@@ -60,7 +60,7 @@
     grid-gap: 40px;
   }
 
-  .sidebar {
+  .aside-flex {
     display: block;
     width: 380px;
     padding-right: 0;
@@ -134,16 +134,34 @@
 
 .item-book {
   max-width: 335px;
+  cursor: pointer;
 }
 
 .item-book:not(:first-child) {
   display: none;
 }
+.item-book:hover,
+.item-book:focus {
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.178);
+}
 
 .pict-book {
   margin-bottom: 14px;
+  width: 100%;
+  height: 535px;
 }
 
+@media screen and (min-width: 768px) {
+  .pict-book {
+    height: 316px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .pict-book {
+    height: 256px;
+  }
+}
 .title-book {
   margin-bottom: 4px;
   font-family: 'DM Sans', sans-serif;
