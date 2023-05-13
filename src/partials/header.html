@@ -1,22 +1,35 @@
 <header class="header">
-  <div class="container header-content">
-    <div class="header-logo">
-      <a class="header-logo-svg" href="../index.html"><svg class="logo-svg">
-          <use class="logo-svg" href = "./img/sprite.svg#icon-logo"></use>
-  </svg></a>
-  <a class="header-logo" href="../index.html">Bookshelf</a> 
+  <div class="header-container container">
+  <div class="header-logo">
+  <a class="header-logo-svg" href="../index.html"><svg class="" width="24" height="24">
+    <use class="" href = "./img/sprite.svg#logo"></use>
+</svg></a>
+<a class="header-logo-bookshelf" href="../index.html">Bookshelf</a> 
   </div>
-  <div class="header-nav hidden">
-    <a href="./index.html" class="header-home-btn">Home</a>
+  <div class="header-nav">
+    <a href="./index.html" class="header-home-btn active">Home</a>
     <a href="./shop.html" class="header-shopping-btn"> Shopping list
       <svg class="header-shopping-logo" width="20" height="20" aria-label="shopping logo" >
         <use href="./img/sprite.svg#icon-cart"></use>
       </svg>
     </a>
-  </div>
+ </div>
   <label class="switch">
     <input type="checkbox">
     <span class="slider round"></span>
   </label>
-  </div>
+
+  <button
+class="log-in-btn"
+type="button"
+data-modal-open
+aria-label="sign in"
+>
+<span class="sign-up-btn__text">Sign up</span>
+<svg class="sign-up-btn__icon" width="20" height="20">
+  <use href="./img/sprite.svg#arrow-right"></use>
+</svg>
+
+</div>
+
 </header>
