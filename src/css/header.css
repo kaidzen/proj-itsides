@@ -76,6 +76,11 @@ input:checked + .slider:before {
 }
 
 
+.header {
+    margin-bottom: 40px;
+}
+
+
 
 
 /* SIGN UP */
