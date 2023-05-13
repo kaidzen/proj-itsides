@@ -8,6 +8,5 @@ export function addLoader() {
 }
 
 export function removeLoader() {
-    const loaderEl = document.querySelector(".js-loader");
-    loaderEl.remove();
+    document.querySelector(".js-loader")?.remove();
 }
