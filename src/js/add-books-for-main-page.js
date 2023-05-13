@@ -19,19 +19,22 @@ function onCtegoryLinkClick(e) {
   }
 
   const selectedCategoryLink = document.querySelector(
-    '.categories-list__item.active'
+    '.categories-list__item.is-active'
   );
 
   if (selectedCategoryLink) {
-    selectedCategoryLink.classList.remove('active');
+    selectedCategoryLink.classList.remove('is-active');
   }
 
   const parent = e.target.closest('.categories-list__item');
-  parent.classList.add('active');
+  parent.classList.add('is-active');
 
   const choisedCategory = e.target.textContent;
   getBooksByCategory(choisedCategory)
     .then(arr => {
+      if (arr.length === 0) {
+        return;
+      }
       const categoryTitleText = arr[0].list_name;
       const categoryTitle = document.querySelector('.js-category-title');
       categoryTitle.textContent = categoryTitleText;
