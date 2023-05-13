@@ -415,8 +415,6 @@
   justify-content: center;
 }
 
-@media (min-width: 1440px) {
-  .book-list__item a:hover .book-overlay {
-    transform: translateY(-100%);
-  }
+.book-list__item a:hover .book-overlay {
+  transform: translateY(-100%);
 }
