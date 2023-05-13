@@ -139,13 +139,9 @@ function createMarkupShoppingList(arr){
                     <div class="autor-link-shoppingList">
                         <p class="shop-book-autor">${author}</p>
                         <ul class="links-shoppingList">
-                        <li><a href="${amazonUrl}"><svg class="amazon" width="32" height="11" aria-label="shopping logo" >
-        <use href="../img/amazon.svg"></use>
-      </svg>
-                        
-                        <img src="../img/icon-book-store/amazon.png" alt="${amazon}"></a></li>
-                        <li><a href="${appleUrl}"><img src="../img/icon-book-store/apple-store.png" alt="${apple}"></a></li>
-                        <li><a href="${bookUrl}"><img src="../img/icon-book-store/book-shop.png" alt="${book}"></a></li>
+                        <li class="shop-book-link"><a "shop-book-link" href="${amazonUrl}"><img class="amazon" src="./img/icon-book-store/amazon.png" alt="${amazon} "></a></li>
+                        <li class=><a "shop-book-link" href="${appleUrl}"><img class="apple-store" src="./img/icon-book-store/apple-store.png" alt="${apple} "></a></li>
+                        <li ><a class="shop-book-link" href="${bookUrl}"><img class="book-shop" src="./img/icon-book-store/book-shop.png" alt="${book} "></a></li>
                         </ul>
                     </div> 
                     </div>
