@@ -1,3 +1,14 @@
+:root {
+  --suport-wrapper: radial-gradient(183.6% 183.01% at 59.76% -23.42%,
+      #4f2ee8 18.03%,
+      #ffffff 100%)
+}
+
+:root[theme='dark'] {
+  --suport-wrapper: radial-gradient(crimson, skyblue);
+  ;
+}
+
 .supportUA {
   max-width: 335px;
   height: 352px;
@@ -8,12 +19,9 @@
 
   border-radius: 16px;
   box-shadow: 0px 10px 10px #f5f5f71a;
-  background: radial-gradient(
-      183.6% 183.01% at 59.76% -23.42%,
-      #4f2ee8 18.03%,
-      #ffffff 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background: var(--suport-wrapper)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  ;
 
   @media screen and (min-width: 768px) {
     max-width: none;
@@ -26,6 +34,14 @@
     width: 356px;
     height: 490px;
     padding: 24px 40px;
+  }
+}
+
+.support-shop-wrapper {
+  display: block;
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }
 

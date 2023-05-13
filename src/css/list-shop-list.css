@@ -1,9 +1,25 @@
-.support-shop-container{
-    padding-top: 14px;
-    padding-bottom: 40px;
+.support-shop-container {
+    position: relative;
+    padding: 40px 20px;
     display: flex;
 }
+@media (min-width: 768px) {
+    .support-shop-container {
+            padding-top: 14px;
+            padding-bottom: 40px;
+            display: flex;
+        }}
 
+@media (min-width: 1440px){
+.support-shop-container {
+        padding-top: 14px;
+        padding-bottom: 40px;
+        display: flex;
+    }
+}
+
+
+.-shop-
 .container-shoppingList{
     padding-left: 40px;
     padding-right: 24px;
@@ -15,46 +31,108 @@
 .pict-shoppingList{
     background-color: aqua;
     /* delete background-color */
-    width: 116px;
-    height: 165px;
+    width: 100px;
+    height: 142px;
     border-radius: 8px;
-    margin-top: 24px;
-    margin-left: 24px;
+    /* margin-top: 24px;
+    margin-left: 24px; */
     
 }
+@media (min-width: 768px) {
+    .pict-shoppingList {
+            background-color: aqua;
+            /* delete background-color */
+            width: 116px;
+            height: 165px;
+            border-radius: 8px;
+            margin-top: 24px;
+            margin-left: 24px;
+    
+        }
+}
 
+@media (min-width: 1440px) {
+    .pict-shoppingList {
+            background-color: aqua;
+            /* delete background-color */
+            width: 116px;
+            height: 165px;
+            border-radius: 8px;
+            margin-top: 24px;
+            margin-left: 24px;
+    
+        }
+}
 .item-shoppingList{
+    padding: 14px;
     display: flex;
+    column-gap: 14px;
     height: 213px;
     /* width: 996px; */
     border-radius: 16px;
     border: 2px solid #4F2EE866;
     list-style-type: none;
 }
+@media (min-width: 768px) {
+    .item-shoppingList {
+            display: flex;
+            height: 213px;
+            /* width: 996px; */
+            border-radius: 16px;
+            border: 2px solid #4F2EE866;
+            list-style-type: none;
+        }
+}
+
+@media (min-width: 1440px) {
+    .item-shoppingList {
+            display: flex;
+            height: 213px;
+            /* width: 996px; */
+            border-radius: 16px;
+            border: 2px solid #4F2EE866;
+            list-style-type: none;
+        }
+}
+
 .content-container-shoppingList{
     display: flex;
     flex-direction: column;
-    /* width: 100vw; */
-    margin: 24px;
-    justify-content: space-between;
     
+    /* width: 100vw; */
+    
+    justify-content: space-between; 
 }
 
 @media screen and (min-width: 768px) {
-    .section-shoppingList {
-      
-    }
+    .content-container-shoppingList {
+            display: flex;
+            flex-direction: column;
+            /* width: 100vw; */
+            margin: 24px;
+            justify-content: space-between;
+        }
 
   }
   
   @media screen and (min-width: 1440px) {
-    .section-shoppingList {
-
-    }
+    .content-container-shoppingList {
+            display: flex;
+            flex-direction: column;
+            /* width: 100vw; */
+            margin: 24px;
+            justify-content: space-between;
+        }
   }
 
 
+  .shop-book-title{
+    margin-bottom: 4px;
+  }
 
+.shop-sub-title{
+    margin-bottom: 8px;
+}
 
 
 
@@ -62,7 +140,9 @@
     display: flex;
     justify-content: space-between;
   }
-  .title-shoppingList p {
+  .title-shoppingList .shop-sub-title {
+    margin-bottom: 8px;
+
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
@@ -73,7 +153,7 @@
   }
 
  .discription-shoppinglist {
-    /* padding-top: 16px; */
+   margin-bottom: 14px;
     font-family: 'DM Sans';
 font-style: normal;
 font-weight: 400;
@@ -91,13 +171,20 @@ color: #111111;
 }
 .links-shoppingList{
     display: flex;
+    align-items:baseline;
     filter: grayscale(100%);
-    gap: 16px;
+    gap: 8px;
     max-height: 30px;
     list-style-type: none;
 }
-.autor-link-shoppingList p {
-    align-self: flex-end;
+@media screen and (min-width: 768px) {
+    .links-shoppingList {
+        gap: 8px;
+    }
+
+}
+.autor-link-shoppingList .shop-book-autor {
+    
 
     font-family: 'DM Sans';
     font-style: italic;

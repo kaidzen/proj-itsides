@@ -1,6 +1,8 @@
 const containerShoppingList = document.querySelector('.container-shoppingList')
 const deleteEl = document.querySelector('.delete-btn')
 const emptyListEl = document.querySelector('.emptyList')
+const support = document.querySelector('.js-support');
+support.classList.add('support-shop-wrapper')
 console.dir(emptyListEl)
 const example = [
     {
@@ -102,27 +104,46 @@ const example = [
 ];
 // console.log(example)
 function createMarkupShoppingList(arr){
-    return arr.map(({id, title, author, bookImage, categoryName, description, buyLinks: [{name:amazon, url:amazonUrl},{name:apple, url:appleUrl},{name:book, url:bookUrl}]})=>
-       `<ul class="ulShoppingList">
+    return arr
+      .map(
+        ({
+          id,
+          title,
+          author,
+          bookImage,
+          categoryName,
+          description,
+          buyLinks: [
+            { name: amazon, url: amazonUrl },
+            { name: apple, url: appleUrl },
+            { name: book, url: bookUrl },
+          ],
+        }) =>
+          `<ul class="ulShoppingList">
             <li class="item-shoppingList" id = '${id}'>
                 <img class="pict-shoppingList" src="${bookImage}" alt="img"></img>
                 <div class="content-container-shoppingList">
                     <div class="title-delete-shoppingList">
                         <div class="title-shoppingList">
-                            <h3>${title}</h3>
-                            <p>${categoryName}</p>
+                            <h3 class="shop-book-title">${title}</h3>
+                            <p class="shop-sub-title">${categoryName}</p>
                         </div>
-                        <button class='delete-btn' type="button">
-                            <img src="../img/icon-book-store/delete.svg">
-                    </button>
+                        <a class='delete-btn'>
+                            <svg class="dump" width="20" height="20" >
+        <use href="./img/sprite.svg#dump"></use>
+                    <a>
                         
                     </div>
                     <p class="discription-shoppinglist">${description}</p>
                     <div>
                     <div class="autor-link-shoppingList">
-                        <p>${author}</p>
+                        <p class="shop-book-autor">${author}</p>
                         <ul class="links-shoppingList">
-                        <li><a href="${amazonUrl}"><img src="../img/icon-book-store/amazon.png" alt="${amazon}"></a></li>
+                        <li><a href="${amazonUrl}"><svg class="amazon" width="32" height="11" aria-label="shopping logo" >
+        <use href="../img/amazon.svg"></use>
+      </svg>
+                        
+                        <img src="../img/icon-book-store/amazon.png" alt="${amazon}"></a></li>
                         <li><a href="${appleUrl}"><img src="../img/icon-book-store/apple-store.png" alt="${apple}"></a></li>
                         <li><a href="${bookUrl}"><img src="../img/icon-book-store/book-shop.png" alt="${book}"></a></li>
                         </ul>
@@ -131,7 +152,8 @@ function createMarkupShoppingList(arr){
                 </div>
             </li>
         </ul>`
-    ).join('')
+      )
+      .join('');
     
 }
 
