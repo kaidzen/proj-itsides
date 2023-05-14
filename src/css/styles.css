@@ -9,6 +9,7 @@
 @import url('./reset.css');
 @import url('./fonts.css');
 @import url('./header.css');
+@import url('./loader.css');
 @import url('./all-сategory.css');
 @import url('./support-UA.css');
 @import url('./main-home.css');
@@ -18,9 +19,8 @@
 @import url('./authorization-modal.css');
 @import url('./authorization-backdrop.css');
 
-
 :root {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans Regular', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -44,7 +44,15 @@
   --defolt-animation: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
 .container {
+  min-width: 320px;
+  max-width: 375px;
   padding-right: 20px;
   padding-left: 20px;
   margin: 0 auto;
@@ -52,6 +60,7 @@
 
 @media (min-width: 768px) {
   .container {
+    max-width: 768px;
     padding-right: 32px;
     padding-left: 32px;
   }
@@ -59,6 +68,7 @@
 
 @media (min-width: 1440px) {
   .container {
+    min-width: 1440px;
     padding-right: 24px;
     padding-left: 24px;
   }
@@ -79,11 +89,9 @@
 @media (min-width: 1440px) {
   .home-page__flex {
     display: flex;
+    gap: 40px;
   }
 
-  .books-wrapper {
-    margin-top: 40px;
-  }
   .aside-flex {
     display: block;
   }

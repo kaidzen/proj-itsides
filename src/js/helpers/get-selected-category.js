@@ -5,6 +5,7 @@ const listSelectCategory = document.querySelector('.list-select-category');
 listCategories.addEventListener('click', onLoadOneCategory);
 
 function onLoadOneCategory(evt) {
+  console.log(evt.target);
   // перевіряємо клік по кнопке
   if (evt.target.nodeName !== 'BUTTON') {
     return;
@@ -34,7 +35,7 @@ function onLoadOneCategory(evt) {
     return resps.json();
   }
 
-  getBooksOneCategory(selectCategory)
+  getBooksOneCategory()
     .then(resp => {
       //очищаемо розмітку
       clearMarkupBestsellers();
@@ -48,7 +49,9 @@ function onLoadOneCategory(evt) {
         createMarkupSelectCategory(resp)
       );
     })
-    .catch(err => console.log(err));
+    .catch(() => {
+      Notiflix.Notify.failure(`Sorry, search failed. Please try again.`);
+    });
 }
 
 export function clearMarkupBestsellers() {
