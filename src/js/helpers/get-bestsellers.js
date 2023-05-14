@@ -41,7 +41,7 @@ function createMarkupOneCategory(arr_books) {
   return arr_books
     .map(
       ({ author, book_image, title, _id }) =>
-        `<li class="item-book" data-id="${_id}>
+        `<li class="item-book" data-id="${_id}">
      <img class="pict-book" src="${book_image}" alt="${title}">
      <h4 class="title-book">${title}</h4>
      <p class="author">${author}</p>

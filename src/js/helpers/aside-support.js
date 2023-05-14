@@ -1,39 +1,39 @@
-// import { fundsArray } from '../helpers/fund-array';
-// import { markupCardFund } from '../helpers/markup-support';
-// // import Swiper from 'swiper';
+import { fundsArray } from '../helpers/fund-array';
+import { markupCardFund } from '../helpers/markup-support';
+// import Swiper from 'swiper';
 
-// const supportListEl = document.querySelector('.support_list-js');
-// const btnSwiperEl = document.querySelector('.swiper-button-next');
+const supportListEl = document.querySelector('.support_list-js');
+const btnSwiperEl = document.querySelector('.swiper-button-next');
 
-// let position = 0;
+let position = 0;
 
-// const addLeadingZero = value => {
-//   return String(value).padStart(2, '0');
-// };
+const addLeadingZero = value => {
+  return String(value).padStart(2, '0');
+};
 
-// const markupSetFunds = fundsArray
-//   .map((el, i) => {
-//     position = addLeadingZero(i + 1);
+const markupSetFunds = fundsArray
+  .map((el, i) => {
+    position = addLeadingZero(i + 1);
 
-//     return markupCardFund(el, position);
-//   })
-//   .join('');
+    return markupCardFund(el, position);
+  })
+  .join('');
 
-// supportListEl.innerHTML = markupSetFunds;
+supportListEl.innerHTML = markupSetFunds;
 
-// const swiper = new Swiper('.swiper', {
-//   direction: 'vertical',
-//   spaceBetween: 20,
-//   slidesPerView: 'auto',
-//   rewind: true,
+const swiper = new Swiper('.swiper', {
+  direction: 'vertical',
+  spaceBetween: 20,
+  slidesPerView: 'auto',
+  rewind: true,
 
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//   },
-// });
+  navigation: {
+    nextEl: '.swiper-button-next',
+  },
+});
 
-// swiper.update();
+swiper.update();
 
-// btnSwiperEl.addEventListener('click', () => {
-//   swiper.slideNext();
-// });
+btnSwiperEl.addEventListener('click', () => {
+  swiper.slideNext();
+});
