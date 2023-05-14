@@ -50,7 +50,7 @@
   }
 }
 
-.title-section {
+/* .title-section {
   margin-bottom: 40px;
   font-family: 'DM Sans', sans-serif;
   font-style: normal;
@@ -59,18 +59,18 @@
   line-height: 1.19;
   letter-spacing: -0.04em;
   color: #111111;
-}
+} */
 
 .titel-span {
   color: #4f2ee8;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .title-section {
     font-size: 48px;
     line-height: 1.08;
   }
-}
+} */
 
 .item-category {
   margin-bottom: 40px;
@@ -264,7 +264,7 @@
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .list-select-category {
     grid-gap: 40px 24px;
   }
