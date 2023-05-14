@@ -1,4 +1,4 @@
-import { app } from "./firebase-application";
+import { app } from "./firebase-application.js"
 import { getDatabase, ref, set, onValue } from 'firebase/database';
 import {
     getAuth,
