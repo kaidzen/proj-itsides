@@ -1,56 +1,79 @@
 <header class="header">
   <div class="container header-content">
-  <div class="logo">
-    <a href="./index.html" class="logo-bookshelf">
-      <svg
-        class="header-logo"
-        width="24"
-        height="24"
-        aria-label="logo bookshelf"
-      >
-        <use href=""></use>
-      </svg>
-      <svg
-      class="header-logo-name"
-      width="77"
-      height="14"
-      aria-label="logo name"
+<!-- HEADER LOGO -->
+
+<div class="logo">
+  <a href="./index.html" class="logo-bookshelf">
+    <svg
+      class="header-logo"
+      width="24"
+      height="24"
+      aria-label="logo bookshelf"
     >
-      <use href=""></use>
-    </svg>
-    </a>
-  </div>
-  <div class="header-nav">
-    <a href="../index.html" class="header-home-btn">Home</a>
-    <a href="../shop.html" class="header-shopping-btn"> Shopping list
-      <svg class="header-shopping-logo" width="20" height="20" aria-label="shopping logo" >
-        <use href=""></use>
-      </svg>
-    </a>
-  </div>
-  <label class="switch">
-    <input class="switch__input" type="checkbox" role="switch">
-    <svg class="switch__icon switch__icon--light" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
-        <g fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round">
-            <circle cx="6" cy="6" r="2"></circle>
-            <g stroke-dasharray="1.5 1.5">
-                <polyline points="6 10,6 11.5" transform="rotate(0,6,6)"></polyline>
-                <polyline points="6 10,6 11.5" transform="rotate(45,6,6)"></polyline>
-                <polyline points="6 10,6 11.5" transform="rotate(90,6,6)"></polyline>
-                <polyline points="6 10,6 11.5" transform="rotate(135,6,6)"></polyline>
-                <polyline points="6 10,6 11.5" transform="rotate(180,6,6)"></polyline>
-                <polyline points="6 10,6 11.5" transform="rotate(225,6,6)"></polyline>
-                <polyline points="6 10,6 11.5" transform="rotate(270,6,6)"></polyline>
-                <polyline points="6 10,6 11.5" transform="rotate(315,6,6)"></polyline>
-            </g>
-        </g>
-    </svg>
-    <svg class="switch__icon switch__icon--dark" viewBox="0 0 12 12" width="12px" height="12px" aria-hidden="true">
-        <g fill="none" stroke="#fff" stroke-width="1" stroke-linejoin="round" transform="rotate(-45,6,6)">
-            <path d="m9,10c-2.209,0-4-1.791-4-4s1.791-4,4-4c.304,0,.598.041.883.105-.995-.992-2.367-1.605-3.883-1.605C2.962.5.5,2.962.5,6s2.462,5.5,5.5,5.5c1.516,0,2.888-.613,3.883-1.605-.285.064-.578.105-.883.105Z"></path>
-        </g>
-    </svg>
-    <span class="switch__sr">Dark Mode</span>
-</label>
+      <use href="./img/sprite.svg#logo"></use>
+    </svg>Bookshelf
+  </a>
 </div>
+
+<!--HEADER NAV -->
+
+<div class="header-nav">
+   <!-- <a href="./index.html" class="header-home-off header-home-on btn">Home</a> -->
+  <a href="./index.html" class="header-home-btn" data-home-btn data-sign-advanced>Home</a>
+   <!-- <a href="./shop.html" class="header-shopping header-shopping-off header-shopping-on btn" > Shopping list -->
+  <a href="./shop.html" class="header-shopping-btn" data-shopping-btn data-sign-advanced> Shopping list
+    <svg class="header-shopping-logo" width="20" height="20" aria-label="shopping logo" >
+      <use href="./img/sprite.svg#icon-cart"></use>
+    </svg>
+  </a>
+</div>
+
+  
+
+<!-- SWITCH AND BURGER -->
+<div class="form-check">
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+  <button type="button" class="header-menu-open header-menu-open-shopping header-menu-open-user">
+    <svg
+      class="icon-menu-burger"
+      width="28"
+      height="28"
+      aria-label="Switch-on mobile menu"
+    >
+      <use href="./img/sprite.svg#menu-burger"></use>
+    </svg>
+  </button>
+
+  <button type="button" class="header-menu-closed header-menu-closed-shopping header-menu-closed-user">
+    <svg
+      class="icon-menu-burger"
+      width="28"
+      height="28"
+      aria-label="Switch-on mobile menu"
+    >
+      <use href="./img/sprite.svg#x-close"></use>
+    </svg>
+  </button>
+</div>
+
+<!-- SIGN UP -->
+<div class="header-sign-btn" data-sign-base>
+<button
+class="log-in-btn"
+type="button"
+data-modal-open
+aria-label="sign in"
+>
+<span class="sign-up-btn__text">Sign up</span>
+<svg class="sign-up-btn__icon" width="20" height="20">
+  <use href="./img/sprite.svg#arrow-right"></use>
+</svg>
+</button>
+</div>
+
+</div>
+
 </header>
