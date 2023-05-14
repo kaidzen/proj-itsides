@@ -70,21 +70,21 @@ async function handelSignInUserAccount(e) {
     handelSignInUserAccount(event);
 });
 
-logOutBtn.addEventListener('click', handelLogOutUserAccount);
+// logOutBtn.addEventListener('click', handelLogOutUserAccount);
 
-function handelLogOutUserAccount() {
-    signOut(auth)
-      .then(() => {
-        userBar.classList.add('visually-hidden');
-        logInBtn.classList.remove('visually-hidden');
-        backdrop.style.display = 'block';
-        userBarBtnText.innerHTML = '';
+// function handelLogOutUserAccount() {
+//     signOut(auth)
+//       .then(() => {
+//         userBar.classList.add('visually-hidden');
+//         logInBtn.classList.remove('visually-hidden');
+//         backdrop.style.display = 'block';
+//         userBarBtnText.innerHTML = '';
   
-        localStorage.removeItem('user');
-      })
-      .catch(error => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
-  }
+//         localStorage.removeItem('user');
+//       })
+//       .catch(error => {
+//         const errorCode = error.code;
+//         const errorMessage = error.message;
+//       });
+//   }
   
