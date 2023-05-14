@@ -44,6 +44,12 @@
   --defolt-animation: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
 .container {
   min-width: 320px;
   max-width: 375px;
