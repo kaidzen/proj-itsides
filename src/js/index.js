@@ -4,7 +4,7 @@ import './helpers/last-word-color';
 import './helpers/get-bestsellers';
 import './helpers/get-selected-category';
 import './helpers/aside-support';
-
+import './helpers/header'
 import './helpers/last-word-color';
 import './categories-list';
 
