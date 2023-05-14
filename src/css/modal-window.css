@@ -15,7 +15,7 @@
 .backdrop.hi-backdrop {
     opacity: 1;
     pointer-events: none;
-   /* visibility: hidden;*/
+    visibility: hidden;
 }
 .backdrop.hi-backdrop .modal {
     transform: translate(-50%, -50%) scale(0.9);
