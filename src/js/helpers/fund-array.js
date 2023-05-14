@@ -2,7 +2,7 @@
     {
       title: 'Save the Children',
       url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-      img: require('.././img/fundations/fund-save-children.svg'),
+      img: require('../../img/fundations/fund-save-children.svg'),
     },
     {
       title: 'Project HOPE',

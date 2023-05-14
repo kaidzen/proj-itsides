@@ -136,6 +136,33 @@ body:has(.switch__input:checked) {
     height: 1px;
   }
 
+  .log-in-btn {
+    display: none;
+  
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 184px;
+      padding: 13px 14px;
+  
+      background: #4f2ee8;
+      border: 1.5px solid var(--primary-text-color);
+      border-radius: 18px;
+      cursor: pointer;
+    }
+  }
+  
+  .log-in-btn {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+    letter-spacing: -0.04em;
+    color: #ffffff;
+  }
+  
+
   /* Main */
+
 
   
