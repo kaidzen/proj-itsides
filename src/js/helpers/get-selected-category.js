@@ -1,58 +1,77 @@
 import Notiflix from 'notiflix';
+import { openModal } from './modal-window';
+import { getBookById } from './get-data';
 import { listCategories, titleSection, BASE_URL } from './get-bestsellers';
-const listSelectCategory = document.querySelector('.list-select-category');
+const listSelectCategory = document.querySelector('.js-books-list');
 
 listCategories.addEventListener('click', onLoadOneCategory);
 
 function onLoadOneCategory(evt) {
+  if (evt.target.classList.contains("js-item-book")){
+    const bookCard = evt.target.closest('.item-book');
+
+    const bookId = bookCard.dataset.id;
+    getBookById(bookId).then(data => console.log(data));
+    console.log(openModal());
+      }
   // перевіряємо клік по кнопке
   if (evt.target.nodeName !== 'BUTTON') {
     return;
-  }
-  // достаємо атрибут датасет з кнопки = назва категорії
-  const titelCategory = evt.target.dataset.category;
-  // приводимо назку категорії до значення, яке вставляємо в URL
-  const selectCategory = titelCategory.split(' ').join('%20');
+  } else {
+    // достаємо атрибут датасет з кнопки = назва категорії
+    const titelCategory = evt.target.dataset.category;
+    // приводимо назку категорії до значення, яке вставляємо в URL
+    const selectCategory = titelCategory.split(' ').join('%20');
 
-  // робимо масив зі словами з назви категорії
-  const arrWordsTitle = titelCategory.split(' ');
+    // робимо масив зі словами з назви категорії
+    const arrWordsTitle = titelCategory.split(' ');
 
-  // знаходимо останній елемент масиву = останнє слово в назві категоріі
-  const lastWord = arrWordsTitle[arrWordsTitle.length - 1];
+    // знаходимо останній елемент масиву = останнє слово в назві категоріі
+    const lastWord = arrWordsTitle[arrWordsTitle.length - 1];
 
-  // знаходимо усі інші елементи масиву і з'єднаємо елементи в строку
-  const titel = arrWordsTitle.slice(0, -1).join(' ');
+    // знаходимо усі інші елементи масиву і з'єднаємо елементи в строку
+    const titel = arrWordsTitle.slice(0, -1).join(' ');
 
-  // робимо фетч запит
-  async function getBooksOneCategory() {
-    const resps = await fetch(
-      `${BASE_URL}/category?category=${selectCategory}`
-    );
-    if (!resps.ok) {
-      throw new Error();
-    }
-    return resps.json();
-  }
-
-  getBooksOneCategory(selectCategory)
-    .then(resp => {
-      //очищаемо розмітку
-      clearMarkupBestsellers();
-
-      // визиваємо функцію, яка змінює заголовок сторінки
-      changeTitle(titel, lastWord);
-
-      // додаємо розмітку за обранною категорією
-      listSelectCategory.insertAdjacentHTML(
-        'beforeend',
-        createMarkupSelectCategory(resp)
+    // робимо фетч запит
+    async function getBooksOneCategory() {
+      const resps = await fetch(
+        `${BASE_URL}/category?category=${selectCategory}`
       );
-    })
-    .catch(err => console.log(err));
+      if (!resps.ok) {
+        throw new Error();
+      }
+      return resps.json();
+    }
+
+    getBooksOneCategory()
+      .then(resp => {
+        //очищаемо розмітку
+        clearMarkupBestsellers();
+
+        // визиваємо функцію, яка змінює заголовок сторінки
+        changeTitle(titel, lastWord);
+
+        // додаємо розмітку за обранною категорією
+        listSelectCategory.insertAdjacentHTML(
+          'beforeend',
+          createMarkupSelectCategory(resp)
+        );
+      })
+      .catch(() => {
+        Notiflix.Notify.failure(`Sorry, search failed. Please try again.`);
+      });
+    removeSeemoreListener();
+  }
 }
 
+// функція, яка очищає розмітку
 export function clearMarkupBestsellers() {
   listCategories.innerHTML = '';
+}
+
+//функція, яка знімає прослуховувач подій
+function removeSeemoreListener() {
+  listCategories.removeEventListener('click', onLoadOneCategory);
 }
 
 // розмітка за обранною категорією

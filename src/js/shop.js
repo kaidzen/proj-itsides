@@ -1,8 +1,12 @@
+import './helpers/header';
+import './nav-menu';
 
-const containerShoppingList = document.querySelector('.container-shoppingList');
+const containerShoppingList = document.querySelector('.ulShoppingList');
 const deleteEl = document.querySelector('.delete-btn');
 const emptyListEl = document.querySelector('.emptyList');
 const support = document.querySelector('.js-support');
+let screenWidth = window.innerWidth;
+
 support.classList.add('support-shop-wrapper');
 console.dir(emptyListEl);
 const example = [
@@ -103,7 +107,7 @@ const example = [
     ],
   },
 ];
-// console.log(example)
+
 function createMarkupShoppingList(arr) {
   return arr
     .map(
@@ -120,14 +124,13 @@ function createMarkupShoppingList(arr) {
           { name: book, url: bookUrl },
         ],
       }) =>
-        `<ul class="ulShoppingList">
-            <li class="item-shoppingList" id = '${id}'>
+        `<li class="item-shoppingList" id = '${id}'>
                 <img class="pict-shoppingList" src="${bookImage}" alt="img"></img>
                 <div class="content-container-shoppingList">
                     <div class="title-delete-shoppingList">
                         <div class="title-shoppingList">
-                            <h3 class="shop-book-title">${title}</h3>
-                            <p class="shop-sub-title">${categoryName}</p>
+                            <h3 class="shop-book-title js-book-title">${title}</h3>
+                            <p class="shop-sub-title js-book-subtitle">${categoryName}</p>
                         </div>
                         <a class='delete-btn'>
                             <svg class="dump" width="20" height="20" >
@@ -135,20 +138,19 @@ function createMarkupShoppingList(arr) {
                     </a>
                         
                     </div>
-                    <p class="discription-shoppinglist">${description}</p>
+                    <p class="discription-shoppinglist js-description">${description}</p>
                     <div>
                     <div class="autor-link-shoppingList">
                         <p class="shop-book-autor">${author}</p>
                         <ul class="links-shoppingList">
-                        <li class="shop-book-link amazon-link">     <a class="shop-a" href="${amazonUrl}"><img class="amazon" src="./img/icon-book-store/amazon.png" alt="${amazon} "></a></li>
-                        <li class="shop-book-link apple-store-link"><a class="shop-a" href="${appleUrl}"><img class="apple-store" src="./img/icon-book-store/apple-store.png" alt="${apple} "></a></li>
-                        <li class="shop-book-link book-shop-link">  <a class="shop-a" href="${bookUrl}"><img class="book-shop" src="./img/icon-book-store/book-shop.png" alt="${book} "></a></li>
+                        <li class="shop-book-link amazon-link">     <a class="shop-a" href="${amazonUrl}"><img class="amazon" src="./img/icon-book-store/amazon.png" alt="${amazon}" width="32 "></a></li>
+                        <li class="shop-book-link apple-store-link"><a class="shop-a" href="${appleUrl}"><img class="apple-store" src="./img/icon-book-store/apple-store.png" alt="${apple} " width="16"></a></li>
+                        <li class="shop-book-link book-shop-link">  <a class="shop-a" href="${bookUrl}"><img class="book-shop" src="./img/icon-book-store/book-shop.png" alt="${book} " width="16"></a></li>
                         </ul>
                     </div> 
                     </div>
                 </div>
-            </li>
-        </ul>`
+            </li>`
     )
     .join('');
 }
@@ -158,25 +160,49 @@ if (example.length > 0) {
     'beforeend',
     createMarkupShoppingList(example)
   );
-}
-// if(example.length>3){
-//     console.log('написать Pagination')
-// }
-else {
+  const booksTitle = document.querySelectorAll('.js-book-title');
+  const booksSubTitle = document.querySelectorAll('.js-book-subtitle');
+  const bookDescription = document.querySelectorAll('.js-description');
+
+  if (screenWidth <= 767) {
+    sliceTitleLength(booksTitle);
+    sliceSubTitleLength(booksSubTitle);
+    sliceDescriptionLength(bookDescription);
+  }
+} else {
   emptyListEl.style.display = 'block';
 }
 
 function createMarkupPaginationSHopList() {}
 
-// deleteEl.forEach(function(deleteEl) {
-//     deleteEl.addEventListener('click', onDeleteClick)
-//   })
+function sliceTitleLength(ellArr) {
+  for (let i = 0; i < ellArr.length; i++) {
+    const bookTitleArr = ellArr[i].textContent.split('');
+    if (bookTitleArr.length > 14) {
+      const sliceTitelArr = bookTitleArr.slice(0, 16);
+      const sliseTitle = sliceTitelArr.join('');
+      ellArr[i].textContent = `${sliseTitle}...`;
+    }
+  }
+}
 
-//   let currentId
-//   function onDeleteClick(){
-
-//     currentId = this.parentNode.getAttribute("id")
-//     console.log(currentId)
-//     let value = notes[currentId];
-//     localStorage.setItem(currentId, value);
-//   }
+function sliceSubTitleLength(ellArr) {
+  for (let i = 0; i < ellArr.length; i++) {
+    const bookSubTitleArr = ellArr[i].textContent.split('');
+    if (bookSubTitleArr.length > 21) {
+      const sliceSubTitelArr = bookSubTitleArr.slice(0, 21);
+      const sliseSubTitle = sliceSubTitelArr.join('');
+      ellArr[i].textContent = `${sliseSubTitle}...`;
+    }
+  }
+}
+function sliceDescriptionLength(ellArr) {
+  for (let i = 0; i < ellArr.length; i++) {
+    const bookDescription = ellArr[i].textContent.split('');
+    if (bookDescription.length > 83) {
+      const sliceDescriptionArr = bookDescription.slice(0, 90);
+      const sliseDescription = sliceDescriptionArr.join('');
+      ellArr[i].textContent = `${sliseDescription}...`;
+    }
+  }
+}

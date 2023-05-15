@@ -9,6 +9,7 @@
 @import url('./reset.css');
 @import url('./fonts.css');
 @import url('./header.css');
+@import url('./log-in-btn.css');
 @import url('./loader.css');
 @import url('./all-сategory.css');
 @import url('./support-UA.css');
@@ -19,8 +20,9 @@
 @import url('./authorization-modal.css');
 @import url('./authorization-backdrop.css');
 
+
 :root {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans Regular', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -35,13 +37,23 @@
   -webkit-text-size-adjust: 100%;
 
   --background-header: rgb(255, 255, 255);
-  --background-main: #d0d0d0;
-  --main-textcolor: #11111199;
-  --H2-textcolor: #111111;
+  --background-main: rgba(246, 246, 246, 1);
+  --main-textcolor: rgba(17, 17, 17, 1);
+  --H2-textcolor: rgb(17, 17, 17);
   --main-color: rgb(79, 46, 232);
   --accent-color: rgb(234, 198, 69);
   --hover-button: rgba(79, 46, 232, 1);
   --defolt-animation: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background: var(--background-main);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
 }
 
 .container {
@@ -62,7 +74,7 @@
 
 @media (min-width: 1440px) {
   .container {
-    max-width: 1440px;
+    min-width: 1440px;
     padding-right: 24px;
     padding-left: 24px;
   }
@@ -83,11 +95,9 @@
 @media (min-width: 1440px) {
   .home-page__flex {
     display: flex;
+    gap: 40px;
   }
 
-  .books-wrapper {
-    margin-top: 40px;
-  }
   .aside-flex {
     display: block;
   }

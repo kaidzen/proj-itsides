@@ -8,19 +8,19 @@
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-    opacity: 0;
+    opacity: 1;
     transition: opacity var(--defolt-animation);
     z-index: 50;
 }
-.backdrop.hi-backdrop {
+.hi-backdrop {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
 }
-.backdrop.hi-backdrop .modal {
+.modal {
     transform: translate(-50%, -50%) scale(0.9);
 }
-.theme-dark .modal {
+.modal {
     background: var(--main-textcolor);
     border: 2px solid var(--background-header);
 }
@@ -49,8 +49,8 @@
         height: 408px;
         border-radius: 8px;
     }
-    .openmodal-btn,
-    .closemodal-btn {
+    .add-modal-btn,
+    .rem-modal-btn {
         width: 279px;
         height: 46px;
         left: 62px;
@@ -61,24 +61,24 @@
     }
     .modal-btn {
         position: absolute;
-        width: 12px;
-        height: 12px;
-        right: 18px;
-        top: 18px;
+        width: 28px;
+        height: 28px;
         border: none;
-        background-color: none;
+        background-color: transparent;
         cursor: pointer;
     }
     .modal-btn:hover {
-        background-color: none;
+        background-color: transparent;
     }
     .modal-link {
         margin-top: 22px;
     }
     .modal-icon {
-        /* width: 12px;
-        height: 12px; */
-        z-index: 55;
+
+        width: 12px;
+        height: 12px;
+        padding: auto;
+
     }
     .modal-text {
         width: 242px;
@@ -114,18 +114,19 @@
         height: 36px;
         margin-top: 16px;
     }
-    .openmodal-btn {
+    .add-modal-btn {
         width: 211px;
         left: 62px;
         padding: 14px 28px;
+        background-color: white;
     }
-    .closemodal-btn {
+    .rem-modal-btn {
         width: 279px;
         left: 28px;
         padding: 14px 23px;
     }
-    .openmodal-btn,
-    .closemodal-btn {
+    .add-modal-btn,
+    .rem-modal-btn {
         position: absolute;
         height: 46px;
         top: 676px;
@@ -138,13 +139,13 @@
         text-transform: uppercase;
         color: var(--H2-textcolor);
     }
-    .openmodal-btn:hover,
-    .openmodal-btn:focus-visible {
-        background: var(--main-color);
+    .add-modal-btn:hover,
+    .add-modal-btn:focus-visible {
+        background-color: var(--main-color);
         color: var(--background-header);
     }
-    .closemodal-btn:focus-visible,
-    .closemodal-btn:hover {
+    .rem-modal-btn:focus-visible,
+    .rem-modal-btn:hover {
         background: var(--main-color);
         color: var(--background-header);
     }
@@ -178,12 +179,13 @@
         display: flex;
         flex-direction: column;
     }
+    /* кнопка закриття*/
     .modal-btn {
         position: absolute;
         right: 31px;
         top: 31px;
         border: none;
-        background-color: none;
+        background-color: transparent;
         cursor: pointer;
     }
     .modal-btn:hover {
@@ -202,16 +204,16 @@
       height: 281px;
       border-radius: 8px;
   }
-  .openmodal-btn {
+  .add-modal-btn {
       width: 499px;
       left: 40px;
   }
-  .closemodal-btn {
+  .rem-modal-btn {
       width: 499px;
       left: 40px;
   }
-  .openmodal-btn,
-  .closemodal-btn {
+  .add-modal-btn,
+  .rem-modal-btn {
       height: 64px;
       top: 361px;
       border: 2px solid var(--main-color);
@@ -226,13 +228,13 @@
       text-transform: uppercase;
       color: var(--H2-textcolor);
   }
-  .openmodal-btn:focus-visible,
-  .openmodal-btn:hover {
+  .add-modal-btn:focus-visible,
+  .add-modal-btn:hover {
       background: var(--main-color);
       color: var(--background-header);
   }
-  .closemodal-btn:focus-visible,
-  .closemodal-btn:hover {
+  .rem-modal-btn:focus-visible,
+  .rem-modal-btn:hover {
       background: var(--main-color);
       color: var(--background-header);
   }
@@ -276,9 +278,6 @@
       display: flex;
       gap: 20px;
       height: 36px;
-  }
-  .modal-link-icon {
-      filter: grayscale(100%);
   }
 }
 

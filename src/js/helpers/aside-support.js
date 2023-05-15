@@ -1,5 +1,6 @@
 
 
+
   // const markupCardFund = (
   //   { title, url, img, img2}, position) => 
   //   `<li class="support_list-item swiper-slide">
@@ -19,24 +20,25 @@ import { fundsArray } from './fund-array';
 import { markupCardFund } from './markup-support';
 
 
-const supportListEl = document.querySelector('.support_list-js');
-const btnSwiperEl = document.querySelector('.swiper-button-next');
 
-let position = 0;
+// const supportListEl = document.querySelector('.support_list-js');
+// const btnSwiperEl = document.querySelector('.swiper-button-next');
 
-const addLeadingZero = value => {
-  return String(value).padStart(2, '0');
-};
+// let position = 0;
 
-const markupSetFunds = fundsArray
-  .map((el, i) => {
-    position = addLeadingZero(i + 1);
+// const addLeadingZero = value => {
+//   return String(value).padStart(2, '0');
+// };
 
-    return markupCardFund(el, position);
-  })
-  .join('');
+// const markupSetFunds = fundsArray
+//   .map((el, i) => {
+//     position = addLeadingZero(i + 1);
 
-supportListEl.innerHTML = markupSetFunds;
+//     return markupCardFund(el, position);
+//   })
+//   .join('');
+
+// supportListEl.innerHTML = markupSetFunds;
 
 // const swiper = new Swiper('.swiper', {
 //   direction: 'vertical',
@@ -53,4 +55,6 @@ supportListEl.innerHTML = markupSetFunds;
 
 // btnSwiperEl.addEventListener('click', () => {
 //   swiper.slideNext();
+
 // });
+

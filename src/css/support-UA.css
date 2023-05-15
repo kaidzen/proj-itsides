@@ -1,17 +1,21 @@
 :root {
-  --suport-wrapper: radial-gradient(183.6% 183.01% at 59.76% -23.42%,
-      #4f2ee8 18.03%,
-      #ffffff 100%)
+  --suport-wrapper: radial-gradient(
+    183.6% 183.01% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #ffffff 100%
+  );
 }
 
 /* :root[theme='dark'] {
   --suport-wrapper: radial-gradient(crimson, skyblue);
+
   ;
 } */
 
+
 .supportUA {
   max-width: 335px;
-  height: 352px;
+  min-height: 352px;
   padding: 24px 40px 20px;
 
   display: flex;
@@ -20,17 +24,21 @@
   border-radius: 16px;
   box-shadow: 0px 10px 10px #f5f5f71a;
   background: var(--suport-wrapper)
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-  ;
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .supportUA {
     max-width: none;
     width: 335px;
-    height: 472px;
+    min-height: 472px;
+    max-height: 472px;
     padding: 24px 40px 14px;
   }
+}
 
-  @media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
+  .supportUA {
     width: 356px;
     height: 490px;
     padding: 24px 40px;
@@ -124,6 +132,7 @@
   fill: #4f2ee8;
 }
 
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -136,3 +145,4 @@
   clip-path: inset(50%);
   margin: -1px;
 }
+

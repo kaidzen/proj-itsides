@@ -13,26 +13,30 @@
   </head>
 
   <body>
-    <load ="partials/authorization-modal.html" />
-    <load ="partials/header.html" />
+    <load="partials/authorization-modal.html" />
+    <load="partials/header.html" />
 
-    <section class="home-page__flex">
-      <aside class="aside-flex">
-        <div>
-          <load ="partials/all-category.html" />
-        </div>
+    <main>
+      <div class="container home-page__flex">
+        <aside class="aside-flex">
+          <div>
+            <load="partials/all-category.html" />
+          </div>
+          <div>
+            <load="partials/support-UA.html" />
+          </div>
+        </aside>
 
-        <div>
-          <load ="partials/support-UA.html" />
-        </div>
-      </aside>
-      <load ="partials/main-home.html" />
+        <load="partials/main-home.html" />
 
-      <load ="partials/category-book-list.html" />
-    </section>
+        <load="partials/category-book-list.html" />
+      </div>
+    </main>
 
     <!-- Loads the specified .html file -->
-    <load ="partials/footer.html" />
+    <load="partials/footer.html" />
+
+    <load="partials/modal-window.html" />
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
