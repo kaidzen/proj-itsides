@@ -1,6 +1,6 @@
 import Notiflix from 'notiflix';
 import { listCategories, titleSection, BASE_URL } from './get-bestsellers';
-const listSelectCategory = document.querySelector('.list-select-category');
+const listSelectCategory = document.querySelector('.js-books-list');
 
 listCategories.addEventListener('click', onLoadOneCategory);
 
