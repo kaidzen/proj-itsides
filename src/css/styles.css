@@ -19,7 +19,6 @@
 @import url('./authorization-modal.css');
 @import url('./authorization-backdrop.css');
 
-
 :root {
   font-family: 'DM Sans Regular', sans-serif;
   font-size: 16px;
@@ -37,8 +36,8 @@
 
   --background-header: rgb(255, 255, 255);
   --background-main: #d0d0d0;
-  --main-textcolor: #11111199;
-  --H2-textcolor: #111111;
+  --main-textcolor: rgba(17, 17, 17, 1);
+  --H2-textcolor: rgb(17, 17, 17);
   --main-color: rgb(79, 46, 232);
   --accent-color: rgb(234, 198, 69);
   --hover-button: rgba(79, 46, 232, 1);
