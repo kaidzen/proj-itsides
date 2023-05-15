@@ -1,6 +1,25 @@
-// import { fundsArray } from '../helpers/fund-array';
-// import { markupCardFund } from '../helpers/markup-support';
-// // import Swiper from 'swiper';
+
+
+
+  // const markupCardFund = (
+  //   { title, url, img, img2}, position) => 
+  //   `<li class="support_list-item swiper-slide">
+  //   <p class="support_number">${position}</p>
+  //   <a class="support_link" href="${url}" target="_blank" rel="noopener noreferrer nofollow">
+  //     <img
+  //     srcset="${img} 1x, ${img2} 2x"
+  //       src="${img}"
+  //       alt="${title}"
+  //       width="149"
+  //       loading="lazy"
+  //     />
+  //   </a>
+  // </li>`;
+
+import { fundsArray } from './fund-array';
+import { markupCardFund } from './markup-support';
+
+
 
 // const supportListEl = document.querySelector('.support_list-js');
 // const btnSwiperEl = document.querySelector('.swiper-button-next');
@@ -36,4 +55,6 @@
 
 // btnSwiperEl.addEventListener('click', () => {
 //   swiper.slideNext();
+
 // });
+
