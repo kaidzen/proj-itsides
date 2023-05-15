@@ -1,11 +1,19 @@
 import Notiflix from 'notiflix';
+import { openModal } from './modal-window';
+import { getBookById } from './get-data';
 import { listCategories, titleSection, BASE_URL } from './get-bestsellers';
 const listSelectCategory = document.querySelector('.list-select-category');
 
 listCategories.addEventListener('click', onLoadOneCategory);
 
 function onLoadOneCategory(evt) {
-  console.log(evt.target);
+  if (evt.target.classList.contains("js-item-book")){
+    const bookCard = evt.target.closest('.item-book');
+
+    const bookId = bookCard.dataset.id;
+    getBookById(bookId).then(data => console.log(data));
+    console.log(openModal());
+      }
   // перевіряємо клік по кнопке
   if (evt.target.nodeName !== 'BUTTON') {
     return;

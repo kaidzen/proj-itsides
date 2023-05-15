@@ -34,3 +34,4 @@ import './categories-list';
 import './helpers/footer';
 import './helpers/fund-array';
 import './nav-menu';
+import './helpers/modal-window';

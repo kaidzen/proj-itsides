@@ -8,19 +8,19 @@
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-    opacity: 0;
+    opacity: 1;
     transition: opacity var(--defolt-animation);
     z-index: 50;
 }
-.backdrop.hi-backdrop {
+.hi-backdrop {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
 }
-.backdrop.hi-backdrop .modal {
+.modal {
     transform: translate(-50%, -50%) scale(0.9);
 }
-.theme-dark .modal {
+.modal {
     background: var(--main-textcolor);
     border: 2px solid var(--background-header);
 }
