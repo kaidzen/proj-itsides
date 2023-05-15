@@ -75,7 +75,7 @@ btnSingUp.addEventListener('click', e => {
 const userBar = document.querySelector('.js-user-bar');
 const logOutBtn = document.querySelector('.js-log-out-btn');
 
-userBar.addEventListener('click', handleUserBarBtnClick);
+// userBar.addEventListener('click', handleUserBarBtnClick);
 
 
 function handleUserBarBtnClick() {

@@ -10,8 +10,8 @@ const db = getDatabase(app);
 
 const logInBtn = document.querySelector('.log-in-btn');
 const backdrop = document.querySelector('.authorization__bacdrop');
-
-
+const headerNav = document.querySelector('.header-nav');
+headerNav.classList.add('is-hidden');
 
 async function writeUserData(userId, name, email) {
 
@@ -42,6 +42,7 @@ const createUser = async( ) => {
         backdrop.style.display = 'none';
         backdrop.classList.add('is-hidden');
         logInBtn.classList.add('visually-hidden');
+        headerNav.classList.remove('is-hidden');
 
     }
     catch (error) {

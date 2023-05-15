@@ -15,6 +15,8 @@ const logInBtn = document.querySelector('.log-in-btn');
 const userBarBtnText = document.querySelector('.user-bar-btn__text');
 const userBar = document.querySelector('.js-user-bar');
 const logOutBtn = document.querySelector('.js-log-out-btn');
+const headerNav = document.querySelector('.header-nav');
+headerNav.classList.add('is-hidden');
 
 async function handelSignInUserAccount(e) {
     e.preventDefault();
@@ -56,8 +58,10 @@ async function handelSignInUserAccount(e) {
           const currentUserName = name.exportVal();
           userBarBtnText.innerHTML = currentUserName.username;
         });
-        userBar.classList.remove('visually-hidden');
+        // userBar.classList.remove('visually-hidden');
         logInBtn.classList.add('visually-hidden');
+        headerNav.classList.remove('is-hidden');
+        headerNav.classList.remove('is-hidden');
 
       }
     });
@@ -79,6 +83,7 @@ async function handelSignInUserAccount(e) {
 //         logInBtn.classList.remove('visually-hidden');
 //         backdrop.style.display = 'block';
 //         userBarBtnText.innerHTML = '';
+// headerNav.classList.add('is-hidden');
   
 //         localStorage.removeItem('user');
 //       })
