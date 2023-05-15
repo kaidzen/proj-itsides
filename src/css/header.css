@@ -442,3 +442,15 @@ input:checked + .slider:before {
   clip-path: inset(50%);
   margin: -1px;
 }
+
+.header-menu-btn .icon-cross {
+  display: none;
+}
+
+.header-menu-btn.is-menu-open .icon-cross {
+  display: block;
+}
+
+.header-menu-btn.is-menu-open .icon-menu {
+  display: none;
+}
