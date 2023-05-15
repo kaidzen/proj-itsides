@@ -140,14 +140,16 @@ input:checked + .slider:before {
   }
 }
 
-.sign-up-btn__text {
-  margin-right: 8px;
-}
-
 .log-in-btn:hover {
   background: white;
   color: var(--main-textcolor);
 }
+
+.sign-up-btn__text {
+  margin-right: 8px;
+}
+
+
 
 /* MAIN CSS*/
 
@@ -424,6 +426,8 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
 }
+
+
 
 
 .visually-hidden {
