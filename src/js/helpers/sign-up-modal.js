@@ -12,7 +12,6 @@ const logInBtn = document.querySelector('.header-sign-btn');
 const backdrop = document.querySelector('.authorization__bacdrop');
 const headerNav = document.querySelector('.header-nav');
 
-
 headerNav.classList.add('is-hidden');
 logInBtn.classList.remove('visually-hidden');
 
