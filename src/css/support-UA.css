@@ -4,10 +4,10 @@
       #ffffff 100%)
 }
 
-:root[theme='dark'] {
+/* :root[theme='dark'] {
   --suport-wrapper: radial-gradient(crimson, skyblue);
   ;
-}
+} */
 
 .supportUA {
   max-width: 335px;
@@ -105,7 +105,7 @@
   width: 32px;
   height: 32px;
   margin: 0 auto;
-
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,4 +122,17 @@
 
 .support_btn-icon {
   fill: #4f2ee8;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
