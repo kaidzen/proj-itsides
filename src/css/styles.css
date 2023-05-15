@@ -35,13 +35,17 @@
   -webkit-text-size-adjust: 100%;
 
   --background-header: rgb(255, 255, 255);
-  --background-main: #d0d0d0;
+  --background-main: rgba(246, 246, 246, 1);
   --main-textcolor: rgba(17, 17, 17, 1);
   --H2-textcolor: rgb(17, 17, 17);
   --main-color: rgb(79, 46, 232);
   --accent-color: rgb(234, 198, 69);
   --hover-button: rgba(79, 46, 232, 1);
   --defolt-animation: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  background: var(--background-main);
 }
 
 @media (prefers-reduced-motion: no-preference) {
