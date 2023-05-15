@@ -3,8 +3,8 @@
   {
     title: 'Save the Children',
     url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-    img: '../img/support/fund1@1x.png',
-     img2: '../img/support/fund1@2x.png',
+    img: './img/support/fund1@1x.png',
+     img2: './img/support/fund1@2x.png',
     
   },
   {
