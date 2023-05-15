@@ -1,6 +1,6 @@
 import Notiflix from 'notiflix';
 
-export const listCategories = document.querySelector('.list-categories');
+export const listCategories = document.querySelector('.js-books-list');
 
 export const titleSection = document.querySelector('.js-category-title');
 export const BASE_URL = 'https://books-backend.p.goit.global/books';
