@@ -1,5 +1,6 @@
 import './helpers/header';
 import './nav-menu';
+import './helpers/aside-support'
 
 const containerShoppingList = document.querySelector('.ulShoppingList');
 const deleteEl = document.querySelector('.delete-btn');
