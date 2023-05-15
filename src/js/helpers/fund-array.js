@@ -10,8 +10,8 @@
   {
     title: 'Project HOPE',
     url: 'https://www.projecthope.org/country/ukraine/',
-    img: '../../img/support/fund2@1x.png',
-    img2: '../../img/support/fund2@2x.png',
+    img: '../img/support/fund2@1x.png',
+    img2: '../img/support/fund2@2x.png',
   },
   {
     title: 'UNITED24',
