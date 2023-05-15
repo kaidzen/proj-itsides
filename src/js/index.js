@@ -4,7 +4,7 @@ import './helpers/last-word-color';
 import './helpers/get-bestsellers';
 import './helpers/get-selected-category';
 import './helpers/aside-support';
-import './helpers/header'
+import './helpers/header';
 import './helpers/last-word-color';
 import './categories-list';
 
@@ -29,3 +29,5 @@ import './helpers/aside-support';
 import './helpers/last-word-color';
 import './categories-list';
 import './helpers/footer';
+import './helpers/fund-array';
+import './nav-menu';
