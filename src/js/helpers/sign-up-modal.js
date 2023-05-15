@@ -8,10 +8,11 @@ const auth = getAuth(app);
 
 const db = getDatabase(app);
 
-const logInBtn = document.querySelector('.log-in-btn');
+const logInBtn = document.querySelector('.header-sign-btn');
 const backdrop = document.querySelector('.authorization__bacdrop');
 const headerNav = document.querySelector('.header-nav');
 headerNav.classList.add('is-hidden');
+logInBtn.classList.remove('visually-hidden');
 
 async function writeUserData(userId, name, email) {
 
@@ -59,6 +60,12 @@ const createUser = async( ) => {
         }
     }
 }
+
+const userBarBtn = document.querySelector('.js-user-bar-btn');
+
+userBarBtn.addEventListener('click', () => {
+  userBarBtn.classList.toggle('is-active');
+});
 
 const signUpForm = document.querySelector('#sign-up');
 signUpForm.addEventListener('submit', (event) => {
