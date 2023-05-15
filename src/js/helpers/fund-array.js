@@ -45,3 +45,5 @@
 //     img: require('.././img/fundations/fund-prytula.svg'),
 //   },
 // ];
+
+

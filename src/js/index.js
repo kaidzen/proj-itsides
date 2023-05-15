@@ -7,7 +7,10 @@ import './helpers/aside-support';
 import './helpers/header';
 import './helpers/last-word-color';
 import './categories-list';
+import './helpers/sign-up-modal';
+import './helpers/sign-in-modal';
 
+import './helpers/modal-authorization';
 // document.documentElement.setAttribute('theme', 'dark');
 
 import './categories-list';
