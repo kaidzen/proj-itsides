@@ -4,6 +4,7 @@
    font-family:'DM Sans Bold';
    font-size: 38px;
    color: var(--H2-textcolor);
+   transition: color var(--defolt-animation);
   }
   /* .footer-logo-dark {
     font-family:'DM Sans Bold';
@@ -13,7 +14,7 @@
   .footer-logo:hover,
   .footer-logo:focus {
     color: var(--hover-button);
-    transition: color var(--defolt-animation);
+    
   }
   /* .footer-logo-dark:hover,
   .footer-logo-dark:focus {
@@ -28,7 +29,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
-  border: 1.5px solid #111111;
+  border: 1.5px solid var(--border-color);
   border-radius: 0px 0px 8px 8px;
   }
   /* .footer-dark {
@@ -79,7 +80,6 @@
   .footer-nav-description:hover,
   .footer-nav-description:focus {
     color: var(--hover-button);
-    transition: color var(--defolt-animation);
   }
   /* .footer-nav-description-dark:hover,
   .footer-nav-description-dark:focus {
@@ -110,6 +110,7 @@
   border-radius: 40px;
   margin: auto;
   background-color: var(--background-header);
+  transition: all var(--defolt-animation);
   }
   /* .footer-btn-dark {
     font-family: 'DM Sans Bold';
@@ -144,8 +145,6 @@
   .footer-btn-dark:hover{
   background-color: #4F2EE8;
   color: var(--background-header);
-  transition: color var(--defolt-animation);
-  transition: background-color var(--defolt-animation);
   }
 
 /* TABLET */
