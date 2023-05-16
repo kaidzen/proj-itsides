@@ -2,31 +2,15 @@ import { getBookById } from './get-data';
 import { Notify } from 'notiflix';
 import scrollLock from 'scroll-lock';
 
+const modalBtnCls = document.querySelector(".modal-btn");
+const modal = document.querySelector('.backdrop');
+const bookItems = document.querySelector('.js-list-books');
 const URL = 'https://books-backend.p.goit.global/books/category?category=';
-
 const bookGet = {
   getBookById, 
 };
 
-<<<<<<< Updated upstream
-=======
 let idBookOne = [];
-
-// bookItems.addEventListener('click', onBookCardClick)
-
-// function onBookCardClick(e) {
-//   if (!e.target.classList.contains("js-item-book")){
-//     return
-//   }
-//   console.log("tyt",e.target)
-//   idBookOne = [];
-//   const bookCard = e.target.closest('.item-book');
-
-//   const bookId = bookCard.dataset.id;
-//   if (!bookCard) return;
-//   idBookOne.push(bookId);
-//   return openModal(bookId);
-// }
 
 function disableScroll() {
   scrollLock.disablePageScroll();
@@ -40,12 +24,14 @@ export function openModal(bookId) {
   modalBtnCls.addEventListener('click', closeModal);
   modal.classList.remove('hi-backdrop');
   disableScroll();
+  document.addEventListener('keydown', handleKeyDown);
 }
 
 function closeModal() {
   modalBtnCls.removeEventListener('click', closeModal);
   modal.classList.add('hi-backdrop');
   enableScroll();
+  document.removeEventListener('keydown', handleKeyDown);
 }
 
 modal.addEventListener('click', (e) => {
@@ -53,4 +39,10 @@ modal.addEventListener('click', (e) => {
     closeModal();
   }
 });
->>>>>>> Stashed changes
+
+function handleKeyDown(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+}
+
