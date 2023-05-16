@@ -2,11 +2,11 @@ import Notiflix from 'notiflix';
 import { openModal } from './modal-window';
 import { getBookById } from './get-data';
 import { listCategories, titleSection, BASE_URL } from './get-bestsellers';
-const listSelectCategory = document.querySelector('.js-books-list');
+export const listSelectCategory = document.querySelector('.js-books-list');
 
 listSelectCategory.addEventListener('click', onLoadOneCategory);
 
-function onLoadOneCategory(evt) {
+export function onLoadOneCategory(evt) {
   if (evt.target.classList.contains('js-item-book')) {
     const bookCard = evt.target.closest('.item-book');
 
@@ -76,7 +76,8 @@ function onLoadOneCategory(evt) {
       .catch(() => {
         Notiflix.Notify.failure(`Sorry, search failed. Please try again.`);
       });
-    removeSeemoreListener();
+    return;
+    // removeSeemoreListener();
   }
 }
 

@@ -24,12 +24,14 @@ getBooksBestsellers()
     Notiflix.Notify.failure(`Sorry, search failed. Please try again.`);
   });
 
-function createMarkupAllBestsellers(arr) {
+export function createMarkupAllBestsellers(arr) {
   const markup = arr
     .map(
       ({ list_name, books }) => `<li class="item-category">
          <h3 class="title-category">${list_name}</h3>
-         <ul class="list-books js-list-books">${createMarkupOneCategory(books)}</ul>
+         <ul class="list-books js-list-books">${createMarkupOneCategory(
+           books
+         )}</ul>
         <button class="btn btn-seemore" data-category="${list_name}">See more</button>
   </li>`
     )
@@ -37,7 +39,7 @@ function createMarkupAllBestsellers(arr) {
   return markup;
 }
 
-function createMarkupOneCategory(arr_books) {
+export function createMarkupOneCategory(arr_books) {
   return arr_books
     .map(
       ({ author, book_image, title, _id }) =>
