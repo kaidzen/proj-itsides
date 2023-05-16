@@ -12,7 +12,7 @@ const bookGet = {
 
 let idBookOne = [];
 
-bookItems.addEventListener('click', onBookCardClick)
+// bookItems.addEventListener('click', onBookCardClick)
 
 // function onBookCardClick(e) {
 //   if (!e.target.classList.contains("js-item-book")){

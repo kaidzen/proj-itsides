@@ -88,16 +88,11 @@
   max-width: 335px;
   cursor: pointer;
   border-radius: 4px;
-  /* transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .item-book:not(:first-child) {
   display: none;
 }
-/* .item-book:hover,
-.item-book:focus {
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-} */
 
 .item-book .pict-book {
   margin-bottom: 14px;
@@ -237,37 +232,21 @@
 }
 
 /* ========================= Стилі для обранної категорії */
-.list-select-category {
-  /* display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  grid-gap: 40px; */
-}
 
 .item-book-select {
   max-width: 335px;
   cursor: pointer;
   border-radius: 4px;
-  /* transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
-/* .item-book-select:hover,
-.item-book-select:focus {
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.178);
-} */
-
 .item-book-select .pict-book {
+  border-radius: 8px;
   height: 485px;
   object-fit: cover;
   object-position: center top;
 }
 
 @media screen and (min-width: 768px) {
-  /* .list-select-category {
-    grid-gap: 40px 25px;
-  } */
-
   .item-book-select {
     width: 218px;
   }
@@ -279,10 +258,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  /* .list-select-category {
-    grid-gap: 40px 24px;
-  } */
-
   .item-book-select {
     width: 180px;
   }
@@ -304,13 +279,6 @@
 
 @media (min-width: 768px) {
   .books-list {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    width: 100%;
-    grid-column-gap: 25px;
-    grid-row-gap: 40px; */
-
     grid-gap: 40px 25px;
   }
 
@@ -321,7 +289,6 @@
 
 @media (min-width: 1440px) {
   .books-list {
-    /* grid-column-gap: 24px; */
     grid-gap: 40px 24px;
   }
   .book-list__item {

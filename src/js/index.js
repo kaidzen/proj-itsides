@@ -1,4 +1,5 @@
 import './categories-list';
+import './get-all-categories'
 import './add-books-for-main-page';
 import './helpers/last-word-color';
 import './helpers/get-bestsellers';
