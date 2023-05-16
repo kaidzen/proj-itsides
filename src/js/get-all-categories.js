@@ -11,12 +11,15 @@ import {
   onLoadOneCategory,
 } from './helpers/get-selected-category';
 
+import { addLoader, removeLoader } from './helpers/loader';
+
 const allCategories = document.querySelector('.link-allcategories');
 
 allCategories.addEventListener('click', getBestsellers);
 
 function getBestsellers() {
-  clearMarkupBestsellers();
+  // clearMarkupBestsellers();
+
   async function getBooksBestsellers() {
     const resps = await fetch(`${BASE_URL}/top-books`);
     if (!resps.ok) {
@@ -27,14 +30,13 @@ function getBestsellers() {
 
   getBooksBestsellers()
     .then(resp => {
-      listCategories.insertAdjacentHTML(
-        'beforeend',
-        createMarkupAllBestsellers(resp)
-      );
+      addLoader();
+      listCategories.innerHTML = createMarkupAllBestsellers(resp);
     })
     .catch(() => {
       Notiflix.Notify.failure(`Sorry, search failed. Please try again.`);
-    });
+    })
+    .finally(() => removeLoader());
   titleSection.innerHTML = `Best Sellers <span class="titel-span">Books</span>`;
 }
 

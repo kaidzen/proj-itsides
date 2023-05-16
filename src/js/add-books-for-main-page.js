@@ -15,7 +15,6 @@ async function getBooksByCategory(choisedCategory) {
 }
 
 function onCtegoryLinkClick(e) {
-  // booksList.innerHTML = '';
   removeLoader();
   addLoader();
   if (e.target.nodeName !== 'A') {
@@ -47,18 +46,18 @@ function onCtegoryLinkClick(e) {
       changeLastWordColor(categoryTitle);
       const markup = createMarkupForBooksByCategory(arr);
       booksList.innerHTML = markup;
-      removeLoader();
     })
-    .catch(error => console.log(error));
+    .catch(error => console.log(error))
+    .finally(() => removeLoader());
 }
 
 function createMarkupForBooksByCategory(arr) {
   return arr
     .map(
-      ({ book_image, title, list_name, author }) => `
-        <li class="book-list__item">
+      ({ book_image, title, list_name, author, _id }) => `
+        <li class="book-list__item" >
             <a  href="#">
-                <div class="book-thumb">
+                <div class="book-thumb" id="${_id}" >
                     <img
                     class="book-img"
                     src="${book_image}"
