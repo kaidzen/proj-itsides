@@ -42,7 +42,7 @@
             0px 1px rgba(0, 0, 0, 0.14);
         border-radius: 18px;
         padding: 40px 24px;
-        opacity: 0;
+        opacity: 1;
     }
     .modal-content-pict {
         width: 287px;

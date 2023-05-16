@@ -12,6 +12,15 @@ const bookGet = {
 
 let idBookOne = [];
 
+
+function disableScroll() {
+  scrollLock.disablePageScroll();
+}
+
+function enableScroll() {
+  scrollLock.enablePageScroll();
+}
+
 // bookItems.addEventListener('click', onBookCardClick)
 
 // function onBookCardClick(e) {
@@ -28,14 +37,31 @@ let idBookOne = [];
 //   return openModal(bookId);
 // }
 
+
 export function openModal(bookId) {
   modalBtnCls.addEventListener('click', closeModal);
   modal.classList.remove('hi-backdrop');
+
+  disableScroll();
+  document.addEventListener('keydown', handleKeyDown);
 }
-
-
 
 function closeModal() {
   modalBtnCls.removeEventListener('click', closeModal);
   modal.classList.add('hi-backdrop');
+  enableScroll();
+  document.removeEventListener('keydown', handleKeyDown);
 }
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+function handleKeyDown(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+}
+
