@@ -1,6 +1,6 @@
 import { getBookById } from './get-data'; 
 import { Notify } from 'notiflix';
-import scrollLock from 'scroll-lock';
+// import scrollLock from 'scroll-lock';
 
 const modalBtnCls = document.querySelector(".modal-btn");
 const modal = document.querySelector('.backdrop');
