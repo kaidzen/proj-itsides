@@ -14,4 +14,6 @@ import './helpers/footer';
 import './helpers/fund-array';
 import './nav-menu';
 import './helpers/modal-window';
+import './helpers/pagination-shop-list';
+
 // document.documentElement.setAttribute('theme', 'dark');
