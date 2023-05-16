@@ -1,9 +1,10 @@
-
- export const fundsArray = [
+import fund1 from './../../img/support/fund1@1x.png';
+console.log(fund1);
+export const fundsArray = [
   {
     title: 'Save the Children',
     url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-    img: '.././img/support/fund1@1x.png',
+    img: fund1,
     img2: '.././img/support/fund1@2x.png',
   },
   {
@@ -16,7 +17,7 @@
     title: 'UNITED24',
     url: 'https://u24.gov.ua/uk',
     img: '.././img/support/fund3@1x.png',
-    img2:'.././img/support/fund3@2x.png',
+    img2: '.././img/support/fund3@2x.png',
   },
   {
     title: 'International Medical Corps',
@@ -27,12 +28,12 @@
   {
     title: 'Medicins Sans Frontieres',
     url: 'https://www.msf.org/ukraine',
-     img: '.././img/support/fund5@1x.png',
-     img2: '.././img/support/fund5@2x.png',
-   },
-   {
-     title: 'RAZOM',
-     url: 'https://www.razomforukraine.org/',
+    img: '.././img/support/fund5@1x.png',
+    img2: '.././img/support/fund5@2x.png',
+  },
+  {
+    title: 'RAZOM',
+    url: 'https://www.razomforukraine.org/',
     img: '.././img/support/fund6@1x.png',
     img2: '.././img/support/fund6@2x.png',
   },
@@ -54,4 +55,4 @@
     img: '.././img/support/fund9@1x.png',
     img2: '.././img/support/fund9@2x.png',
   },
-  ]
+];
