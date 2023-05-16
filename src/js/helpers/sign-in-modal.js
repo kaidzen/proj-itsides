@@ -11,7 +11,7 @@ import Notiflix from 'notiflix';
 const backdrop = document.querySelector('.authorization__bacdrop');
 const db = getDatabase(app);
 const auth = getAuth(app);
-const logInBtn = document.querySelector('.header-sign-btn');
+const logInBtn = document.querySelector('.log-in-btn');
 const userBarBtnText = document.querySelector('.user-bar-btn__text');
 const userBar = document.querySelector('.js-user-bar');
 const logOutBtn = document.querySelector('.js-log-out-btn');

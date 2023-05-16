@@ -8,7 +8,7 @@ const auth = getAuth(app);
 
 const db = getDatabase(app);
 
-const logInBtn = document.querySelector('.header-sign-btn');
+const logInBtn = document.querySelector('.log-in-btn');
 const backdrop = document.querySelector('.authorization__bacdrop');
 const headerNav = document.querySelector('.header-nav');
 

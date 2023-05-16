@@ -4,7 +4,7 @@ import { addLoader, removeLoader } from './helpers/loader';
 const URL = 'https://books-backend.p.goit.global/books/category-list';
 
 const categoriesContainer = document.querySelector('.categories-list-js');
-document.documentElement.setAttribute('theme', 'dark');
+
 //  Отримуємо масив зі списком категорії з бекенду
 const getCategoriesList = async () => {
   const response = await axios(URL);
