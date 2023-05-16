@@ -7,7 +7,7 @@ import {
     signOut,
   } from 'firebase/auth';
 import Notiflix from 'notiflix';
-
+// tedddf
 const backdrop = document.querySelector('.authorization__bacdrop');
 const db = getDatabase(app);
 const auth = getAuth(app);
