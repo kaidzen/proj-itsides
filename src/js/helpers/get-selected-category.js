@@ -4,16 +4,16 @@ import { getBookById } from './get-data';
 import { listCategories, titleSection, BASE_URL } from './get-bestsellers';
 const listSelectCategory = document.querySelector('.js-books-list');
 
-listCategories.addEventListener('click', onLoadOneCategory);
+listSelectCategory.addEventListener('click', onLoadOneCategory);
 
 function onLoadOneCategory(evt) {
-  if (evt.target.classList.contains("js-item-book")){
+  if (evt.target.classList.contains('js-item-book')) {
     const bookCard = evt.target.closest('.item-book');
 
     const bookId = bookCard.dataset.id;
     getBookById(bookId).then(data => console.log(data));
     console.log(openModal());
-      }
+  }
   // перевіряємо клік по кнопке
   if (evt.target.nodeName !== 'BUTTON') {
     return;
@@ -31,6 +31,22 @@ function onLoadOneCategory(evt) {
 
     // знаходимо усі інші елементи масиву і з'єднаємо елементи в строку
     const titel = arrWordsTitle.slice(0, -1).join(' ');
+
+    const getAllCategoriesChild = document.querySelector('.categories-list-js');
+    const arrChild = getAllCategoriesChild.children;
+
+    [...arrChild].find(item => {
+      if (item.firstChild.textContent === titelCategory) {
+        const selectedCategoryLink = document.querySelector(
+          '.categories-list__item.is-active'
+        );
+        if (selectedCategoryLink) {
+          selectedCategoryLink.classList.remove('is-active');
+        }
+        item.classList.add('is-active');
+        return;
+      }
+    });
 
     // робимо фетч запит
     async function getBooksOneCategory() {
@@ -80,10 +96,13 @@ function createMarkupSelectCategory(arr_select_books) {
     .map(
       ({ author, book_image, title, _id }) =>
         `<li class="item-book-select" data-id="${_id}">
-     <img class="pict-book" src="${book_image}" alt="${title}">
-     <h4 class="title-book">${title}</h4>
-     <p class="author">${author}</p>
-    </li>`
+          <div class="book-thumb js-item-book">
+            <img class="pict-book" src="${book_image}" alt="${title}">
+            <div class="book-overlay js-item-book">quick view</div>
+          </div>
+          <h4 class="title-book">${title}</h4>
+          <p class="author">${author}</p>
+        </li>`
     )
     .join('');
 }
@@ -92,3 +111,6 @@ function createMarkupSelectCategory(arr_select_books) {
 function changeTitle(beginWords, lastWord) {
   titleSection.innerHTML = `${beginWords} <span class="titel-span">${lastWord}</span>`;
 }
+
+// const getAllCategoriesChild = document.querySelectorAll('.categories-list-js');
+// console.log(getAllCategoriesChild);
