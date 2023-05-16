@@ -1,6 +1,6 @@
 import { getBookById } from './get-data'; 
 import { Notify } from 'notiflix';
-// import scrollLock from 'scroll-lock';
+import scrollLock from 'scroll-lock';
 
 const modalBtnCls = document.querySelector(".modal-btn");
 const modal = document.querySelector('.backdrop');
@@ -65,3 +65,30 @@ function handleKeyDown(e) {
   }
 }
 
+const addToShopBtn = document.querySelector('.add-modal-btn');
+const modalText = document.querySelector('.modal-text');
+addToShopBtn.addEventListener('click', toggleShoppingList);
+
+function toggleShoppingList() {
+  if (addToShopBtn.classList.contains('openmodal-btn')) {
+    addToShoppingList();
+  } else {
+    removeFromShoppingList();
+  }
+}
+
+function addToShoppingList() {
+  addToShopBtn.textContent = 'Remove from the shopping list';
+  modalText.style.display = 'block';
+  addToShopBtn.classList.remove('openmodal-btn');
+  addToShopBtn.classList.add('closemodal-btn');
+  // треба написати ще додавання книги до списку покупок
+}
+
+function removeFromShoppingList() {
+  addToShopBtn.textContent = 'Add to shopping list';
+  modalText.style.display = 'none';
+  addToShopBtn.classList.remove('closemodal-btn');
+  addToShopBtn.classList.add('openmodal-btn');
+  // треба написати ще логіку для видалення книги зі списку покупок
+}
