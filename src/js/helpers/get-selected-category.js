@@ -3,6 +3,7 @@ import { openModal } from './modal-window';
 import { getBookById } from './get-data';
 import { listCategories, titleSection, BASE_URL } from './get-bestsellers';
 export const listSelectCategory = document.querySelector('.js-books-list');
+import { addLoader, removeLoader } from '../helpers/loader';
 
 listSelectCategory.addEventListener('click', onLoadOneCategory);
 
@@ -50,6 +51,7 @@ export function onLoadOneCategory(evt) {
 
     // робимо фетч запит
     async function getBooksOneCategory() {
+      addLoader();
       const resps = await fetch(
         `${BASE_URL}/category?category=${selectCategory}`
       );
@@ -72,6 +74,7 @@ export function onLoadOneCategory(evt) {
           'beforeend',
           createMarkupSelectCategory(resp)
         );
+        removeLoader();
       })
       .catch(() => {
         Notiflix.Notify.failure(`Sorry, search failed. Please try again.`);

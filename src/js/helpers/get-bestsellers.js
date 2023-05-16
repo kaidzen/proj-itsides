@@ -1,4 +1,5 @@
 import Notiflix from 'notiflix';
+import { addLoader, removeLoader } from '../helpers/loader';
 
 export const listCategories = document.querySelector('.js-books-list');
 
@@ -6,6 +7,7 @@ export const titleSection = document.querySelector('.js-category-title');
 export const BASE_URL = 'https://books-backend.p.goit.global/books';
 
 async function getBooksBestsellers() {
+  addLoader();
   const resps = await fetch(`${BASE_URL}/top-books`);
   if (!resps.ok) {
     throw new Error();
@@ -19,6 +21,7 @@ getBooksBestsellers()
       'beforeend',
       createMarkupAllBestsellers(resp)
     );
+    removeLoader();
   })
   .catch(() => {
     Notiflix.Notify.failure(`Sorry, search failed. Please try again.`);

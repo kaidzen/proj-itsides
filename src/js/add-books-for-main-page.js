@@ -15,7 +15,6 @@ async function getBooksByCategory(choisedCategory) {
 }
 
 function onCtegoryLinkClick(e) {
-  // booksList.innerHTML = '';
   removeLoader();
   addLoader();
   if (e.target.nodeName !== 'A') {
@@ -47,9 +46,9 @@ function onCtegoryLinkClick(e) {
       changeLastWordColor(categoryTitle);
       const markup = createMarkupForBooksByCategory(arr);
       booksList.innerHTML = markup;
-      removeLoader();
     })
-    .catch(error => console.log(error));
+    .catch(error => console.log(error))
+    .finally(() => removeLoader());
 }
 
 function createMarkupForBooksByCategory(arr) {
