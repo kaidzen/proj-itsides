@@ -4,6 +4,8 @@ import scrollLock from 'scroll-lock';
 
 const modalBtnCls = document.querySelector(".modal-btn");
 const modal = document.querySelector('.backdrop');
+const modalContentBody = document.querySelector('.modal-content-body');
+
 const bookItems = document.querySelector('.js-list-books');
 const URL = 'https://books-backend.p.goit.global/books/category?category=';
 const bookGet = {
@@ -37,13 +39,59 @@ function enableScroll() {
 //   return openModal(bookId);
 // }
 
+function modalCartBoock(book) {
+  return  `
+          <div class="modal-content-card">
+          
+          <div class="modal-content-img">
+              <img class='modal-content-pict' src="${book.bookImage}" alt="${book.title}"  />
+          </div>
+          <div class="modal-content-text">
+              <h2 class="modal-content-titl"><b>${book.title}</b></h2>
+              <p class="modal-content-autur"><b>${book.author}</b></p>
+      <p class="modal-content-abst"><b>${book.description}</b></p>
+      <ul class="modal-link">
+          <li>
+              <a class="modal-link" href="${book.buyLinks[0].url}" target="_blank">
+                  <img class="modal-link-icon"
+                          src="./img/icon-book-store/amazon.png"
+                          alt="amazon" width="62" height="19"></img></a>
+          </li>
+          
+              <li>
+                  <a class="modal-link" href="${book.buyLinks[1].url}" target="_blank">
+                      <img class="modal-link-icon"
+                          src="./img/icon-book-store/apple-store.png"
+                          alt="apple shop" width="33" height="32
+                          ></img></a>
+              </li>
 
-export function openModal(bookId) {
+              <li>
+                  <a class="modal-link" href="${book.buyLinks[2].url}" target="_blank">
+                      <img class="modal-link-icon"
+                          src="./img/icon-book-store/book-shop.png"
+                          alt="book shop" width="38" height="36"
+                          ></img></a>
+              </li>
+      </ul>
+
+          </div>
+      </div>`;
+}
+
+function renderBoocksCard(book){
+  modalContentBody.innerHTML = modalCartBoock(book);
+}
+
+
+export async function openModal(bookId) {
   modalBtnCls.addEventListener('click', closeModal);
   modal.classList.remove('hi-backdrop');
 
   disableScroll();
   document.addEventListener('keydown', handleKeyDown);
+  
+  renderBoocksCard(bookId)
 }
 
 function closeModal() {
