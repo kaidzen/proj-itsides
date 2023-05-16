@@ -367,6 +367,9 @@
   margin-bottom: 4px;
 }
 
+.dark-theme .book-tittle {
+  color: var(--text-color);
+}
 .book-author {
   font-family: 'DM Sans Regular';
   font-style: italic;
