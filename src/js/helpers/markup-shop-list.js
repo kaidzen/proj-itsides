@@ -1,19 +1,20 @@
-export const createMarkupShoppingList = (arr) => arr
-      .map(
-        ({
-          id,
-          title,
-          author,
-          bookImage,
-          categoryName,
-          description,
-          buyLinks: [
-            { name: amazon, url: amazonUrl },
-            { name: apple, url: appleUrl },
-            { name: book, url: bookUrl },
-          ],
-        }) =>
-          `<li class="item-shoppingList" id = '${id}'>
+export const createMarkupShoppingList = arr =>
+  arr
+    .map(
+      ({
+        id,
+        title,
+        author,
+        bookImage,
+        categoryName,
+        description,
+        buyLinks: [
+          { name: amazon, url: amazonUrl },
+          { name: apple, url: appleUrl },
+          { name: book, url: bookUrl },
+        ],
+      }) =>
+        `<li class="item-shoppingList  js-item-book" id = '${id}'>
                 <img class="pict-shoppingList" src="${bookImage}" alt="img"></img>
                 <button type='button' class='delete-btn' id= '${id}'>
                     </button>
@@ -39,5 +40,5 @@ export const createMarkupShoppingList = (arr) => arr
                     </div>
                 </div>
             </li>`
-      )
-      .join('');
+    )
+    .join('');
