@@ -21,7 +21,6 @@
 @import url('./authorization-backdrop.css');
 @import url('./pagination-shop-list.css');
 
-
 :root {
   font-family: 'DM Sans Regular', sans-serif;
   font-size: 16px;
@@ -85,11 +84,14 @@ body {
   --panel-bg-color: rgba(17, 17, 17, 1);
   --container-bg-color: rgba(32, 32, 36, 1);
   --text-color: #ffffff;
+  
 }
 
 @media (min-width: 768px) {
   .aside-flex {
+    width: 704px;
     display: flex;
+    grid-gap: 0 32px;
   }
 }
 
@@ -100,6 +102,8 @@ body {
   }
 
   .aside-flex {
+    width: 356px;
     display: block;
+    grid-gap: 0;
   }
 }

@@ -88,41 +88,43 @@
   max-width: 335px;
   cursor: pointer;
   border-radius: 4px;
-  transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    padding 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .item-book:not(:first-child) {
   display: none;
 }
-.item-book:hover,
+/* .item-book:hover,
 .item-book:focus {
-  padding: 2px;
-  transform: scale(1.05);
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  transition: var(--defolt-animation);
-}
+} */
 
-.pict-book {
+.item-book .pict-book {
   margin-bottom: 14px;
-  width: 100%;
-  height: 535px;
+  width: 335px;
+  height: 485px;
   border-radius: 4px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 @media screen and (min-width: 768px) {
-  .pict-book {
+  .item-book .pict-book {
+    width: 218px;
     height: 316px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .pict-book {
+  .item-book .pict-book {
+    width: 180px;
     height: 256px;
   }
 }
 .title-book {
   margin-bottom: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
   font-family: 'DM Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -134,7 +136,13 @@
   color: #111111;
 }
 
+.dark-theme .title-book {
+  color: var(--text-color);
+}
+
 .author {
+  margin-left: 4px;
+  margin-right: 4px;
   font-family: 'DM Sans', sans-serif;
   font-style: italic;
   font-weight: 400;
@@ -216,6 +224,12 @@
     background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.dark-theme .btn-seemore {
+  color: #ffffff;
+  background-color: var(--panel-bg-color);
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .btn-seemore:hover,
 .btn-seemore:focus {
   color: #ffffff;
@@ -224,60 +238,80 @@
 
 /* ========================= Стилі для обранної категорії */
 .list-select-category {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  grid-gap: 40px;
+  grid-gap: 40px; */
 }
 
 .item-book-select {
   max-width: 335px;
   cursor: pointer;
   border-radius: 4px;
-  transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    padding 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
-.item-book-select:hover,
+/* .item-book-select:hover,
 .item-book-select:focus {
-  padding: 2px;
-  transform: scale(1.05);
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  transition: var(--defolt-animation);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.178);
+} */
 
-  /* box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.178); */
+.item-book-select .pict-book {
+  height: 485px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 @media screen and (min-width: 768px) {
-  .list-select-category {
+  /* .list-select-category {
     grid-gap: 40px 25px;
-  }
+  } */
 
   .item-book-select {
     width: 218px;
   }
+
+  .item-book-select .pict-book {
+    width: 218px;
+    height: 316px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-  .list-select-category {
+  /* .list-select-category {
     grid-gap: 40px 24px;
-  }
+  } */
 
   .item-book-select {
     width: 180px;
+  }
+
+  .item-book-select .pict-book {
+    width: 180px;
+    height: 256px;
   }
 }
 
 /* =================================================================================== */
 
+.books-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 40px;
+}
+
 @media (min-width: 768px) {
   .books-list {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: start;
     width: 100%;
     grid-column-gap: 25px;
-    grid-row-gap: 40px;
+    grid-row-gap: 40px; */
+
+    grid-gap: 40px 25px;
   }
 
   .book-list__item {
@@ -287,7 +321,8 @@
 
 @media (min-width: 1440px) {
   .books-list {
-    grid-column-gap: 24px;
+    /* grid-column-gap: 24px; */
+    grid-gap: 40px 24px;
   }
   .book-list__item {
     flex-basis: calc((100% - 96px) / 5);
@@ -303,6 +338,10 @@
 
   color: var(--H2-textcolor);
   margin-bottom: 40px;
+}
+
+.dark-theme .categories-list__title {
+  color: var(--text-color);
 }
 
 .book-img {
@@ -382,5 +421,13 @@
 }
 
 .book-list__item a:hover .book-overlay {
+  transform: translateY(-100%);
+}
+
+.item-book .book-thumb:hover .book-overlay {
+  transform: translateY(-100%);
+}
+
+.item-book-select .book-thumb:hover .book-overlay {
   transform: translateY(-100%);
 }
