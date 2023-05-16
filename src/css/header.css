@@ -35,6 +35,7 @@
   display: block;
 }
 
+
 @media (max-width: 767.98px) {
   .header-nav {
     position: absolute;
@@ -142,13 +143,15 @@ input:checked + .slider:before {
 
 .log-in-btn:hover {
   background: white;
-  color: var(--H2-textcolor);
+  color: var(--main-textcolor);
 }
-
+.log-in-btn:hover > .sign-up-btn__text {
+  color: #000000;
+}
 .sign-up-btn__text {
   margin-right: 8px;
+  transition: all var(--defolt-animation);
 }
-
 
 
 /* MAIN CSS*/
@@ -304,6 +307,9 @@ input:checked + .slider:before {
     margin-right: 70px;
   }
 
+  .sign-up-btn__text {
+    margin-right: 100px;
+  }
 
   .header-home-item {
     margin-right: 5px;
@@ -424,9 +430,6 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
-
-
-
 .header-menu-btn .icon-cross {
   display: none;
 }
@@ -439,6 +442,7 @@ input:checked + .slider:before {
   display: none;
 }
 
+
 /* SIGN BTN AFTER AUTHORIZATION */
 
 .user-bar {
@@ -450,6 +454,7 @@ input:checked + .slider:before {
     display: block;
   }
 }
+
 
 
 .user-bar-btn {
@@ -487,6 +492,7 @@ input:checked + .slider:before {
   -webkit-line-clamp: 1;
   overflow: hidden;
 }
+
 
 .dropdown {
   position: absolute;
@@ -565,13 +571,16 @@ input:checked + .slider:before {
   }
 }
 
+
 .sign-up-btn__text {
   font-weight: 500;
   font-size: 14px;
   line-height: calc(18 / 14);
   letter-spacing: -0.04em;
   margin-right: 90px;
+  /* color: #ffffff; */
 }
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;

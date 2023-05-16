@@ -10,9 +10,16 @@ menuBtn.addEventListener('click', () => {
 const themeSwitcher = document.getElementById('themeSwitcher');
 const container = document.querySelector('.header');
 
-themeSwitcher.addEventListener('change', () => {
-  container.classList.toggle('dark-theme');
+themeSwitcher.addEventListener('change', (event) => {
+  // container.classList.toggle('dark-theme');
+  console.dir(event.target)
+  if (event.target.checked) {
+    document.documentElement.setAttribute('theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute('theme');
+  }
 });
+
 
 const themeSwitcherBody = document.getElementById('themeSwitcher');
 const body = document.querySelector('body');
