@@ -35,7 +35,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
+  --border-color: #111111;
   --background-header: rgb(255, 255, 255);
   --background-main: rgba(246, 246, 246, 1);
   --main-textcolor: rgba(17, 17, 17, 1);
@@ -81,10 +81,14 @@ body {
 }
 
 :root[theme='dark'] {
-  --panel-bg-color: rgba(17, 17, 17, 1);
+  --panel-bg-color: #202024;
   --container-bg-color: rgba(32, 32, 36, 1);
+  --background-main: #202024;
   --text-color: #ffffff;
-  
+  --background-header: #000000;
+  --H2-textcolor: #ffffff;
+  --border-color: #ffffff;
+  --main-textcolor: #ffffff;
 }
 
 @media (min-width: 768px) {

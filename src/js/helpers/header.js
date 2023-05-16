@@ -21,9 +21,9 @@ themeSwitcher.addEventListener('change', (event) => {
 });
 
 
-const themeSwitcherBody = document.getElementById('themeSwitcher');
-const body = document.querySelector('body');
+// const themeSwitcherBody = document.getElementById('themeSwitcher');
+// const body = document.querySelector('body');
 
-themeSwitcherBody.addEventListener('change', () => {
-  body.classList.toggle('dark-theme');
-});
+// themeSwitcherBody.addEventListener('change', () => {
+//   body.classList.toggle('dark-theme');
+// });
