@@ -11,8 +11,7 @@ export function onLoadOneCategory(evt) {
     const bookCard = evt.target.closest('.item-book');
 
     const bookId = bookCard.dataset.id;
-    getBookById(bookId).then(data => console.log(data));
-    console.log(openModal());
+    getBookById(bookId).then(data => openModal(data));
   }
   // перевіряємо клік по кнопке
   if (evt.target.nodeName !== 'BUTTON') {
