@@ -14,11 +14,11 @@ export const createMarkupShoppingList = arr =>
           { name: book, url: bookUrl },
         ],
       }) =>
-        `<li class="item-shoppingList  js-item-book" id = '${id}'>
-                <img class="pict-shoppingList" src="${bookImage}" alt="img"></img>
-                <button type='button' class='delete-btn' id= '${id}'>
+        `<li class="item-shoppingList  js-item-book js-item-book" id = '${id}'>
+                <img class="pict-shoppingList js-item-book" src="${bookImage}" alt="img"></img>
+                <button type='button' class='delete-btn js-item-book' id= '${id}'>
                     </button>
-                <div class="content-container-shoppingList">
+                <div class="content-container-shoppingList js-item-book">
                     <div class="title-delete-shoppingList">
                         <div class="title-shoppingList">
                             <h3 class="shop-book-title">${title}</h3>

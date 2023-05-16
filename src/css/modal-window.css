@@ -269,17 +269,19 @@
       margin-top: 20px;
   }
   .modal-text {
-      position: absolute;
-      width: 324px;
-      height: 28px;
-      left: 128px;
-      top: 433px;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      text-align: center;
-      letter-spacing: -0.04em;
-      color: var(--main-textcolor);
+    position: absolute;
+    width: 324px;
+    height: 28px;
+    left: 128px;
+    top: 433px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    
+    color: rgba(17, 17, 17, 0.5);
   }
   .modal-link {
       display: flex;
